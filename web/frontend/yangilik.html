@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from agmstudio.io/themes/material-style/1.3.2/blog-post2.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 31 Mar 2017 11:26:52 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#333">
+    <title>Yangilik</title>
+    <meta name="description" content="Material Style Theme">
+    <link rel="shortcut icon" href="assets/img/favicon30f4.png?v=3">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/preload.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/style.light-blue-500.min.css" />
+    <link rel="stylesheet" href="assets/css/width-boxed.min.css" id="ms-boxed" disabled="">
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div id="ms-preload" class="ms-preload">
+      <div id="status">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sb-site-container">
+
+      <!-- Modal -->
+      <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog animated zoomIn animated-3x" role="document">
+          <div class="modal-content">
+            <div class="modal-header shadow-2dp no-pb">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <i class="zmdi zmdi-close"></i>
+                </span>
+              </button>
+              <div class="modal-title text-center">
+                <span class="ms-logo ms-logo-white ms-logo-sm mr-1">P</span>
+                <h3 class="no-m ms-site-title">Psixologik
+                  <span>Portal</span>
+                </h3>
+              </div>
+              <div class="modal-header-tabs">
+                <ul class="nav nav-tabs nav-tabs-full nav-tabs-3 nav-tabs-primary" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="withoutripple">
+                      <i class="zmdi zmdi-account"></i> Login</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#ms-register-tab" aria-controls="ms-register-tab" role="tab" data-toggle="tab" class="withoutripple">
+                      <i class="zmdi zmdi-account-add"></i> Ro'yxatdan o'tish</a>
+                  </li>
+                 <!--  <li role="presentation">
+                    <a href="#ms-recovery-tab" aria-controls="ms-recovery-tab" role="tab" data-toggle="tab" class="withoutripple">
+                      <i class="zmdi zmdi-key"></i> Recovery Pass</a>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="ms-login-tab">
+                  <form autocomplete="off">
+                    <fieldset>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user">Foydalanuvchi nomi</label>
+                          <input type="text" id="ms-form-user" class="form-control"> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass">Parol</label>
+                          <input type="password" id="ms-form-pass" class="form-control"> </div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-md-6">
+                          <div class="form-group no-mt">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> Eslab qolish </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <button class="btn btn-raised btn-primary pull-right">Kirish</button>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                  <div class="text-center">
+                    <h3>Quyidagilar yordamida kirish</h3>
+                    <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-facebook">
+                      <i class="zmdi zmdi-facebook"></i> Facebook</a>
+                    <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-twitter">
+                      <i class="zmdi zmdi-twitter"></i> Twitter</a>
+                    <a href="javascript:void(0)" class="wave-effect-light btn btn-raised btn-google">
+                      <i class="zmdi zmdi-google"></i> Google</a>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ms-register-tab">
+                  <form>
+                    <fieldset>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-account"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-user">Foydalanuvchi nomi</label>
+                          <input type="text" id="ms-form-user" class="form-control"> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-email"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-email">Email</label>
+                          <input type="email" id="ms-form-email" class="form-control"> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass">Parol</label>
+                          <input type="password" id="ms-form-pass" class="form-control"> </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="zmdi zmdi-lock"></i>
+                          </span>
+                          <label class="control-label" for="ms-form-pass">Parolni qayta tering</label>
+                          <input type="password" id="ms-form-pass" class="form-control"> </div>
+                      </div>
+                      <button class="btn btn-raised btn-block btn-primary">Hoziroq ro'yxatdan o'ting</button>
+                    </fieldset>
+                  </form>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="ms-recovery-tab">
+                  <fieldset>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-account"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-user">Foydalanuvchi nomi</label>
+                        <input type="text" id="ms-form-user" class="form-control"> </div>
+                    </div>
+                    <div class="form-group label-floating">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="zmdi zmdi-email"></i>
+                        </span>
+                        <label class="control-label" for="ms-form-email">Email</label>
+                        <input type="email" id="ms-form-email" class="form-control"> </div>
+                    </div>
+                    <button class="btn btn-raised btn-block btn-primary">Parolni yuborish</button>
+                  </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <header class="ms-header ms-header-primary">
+        <div class="container container-full">
+          <div class="ms-title">
+            <a href="#">
+              <!-- <img src="assets/img/demo/logo-header.png" alt=""> -->
+              <span class="ms-logo animated zoomInDown animation-delay-5">P</span>
+              <h1 class="animated fadeInRight animation-delay-6">Psixologik
+                <span>Portal</span>
+              </h1>
+            </a>
+          </div>
+          <div class="header-right">
+            <div class="share-menu">
+              <ul class="share-menu-list">
+                <li class="animated fadeInRight animation-delay-3">
+                  <a href="javascript:void(0)" class="btn-circle btn-google">
+                    <i class="zmdi zmdi-google"></i>
+                  </a>
+                </li>
+                <li class="animated fadeInRight animation-delay-2">
+                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
+                    <i class="zmdi zmdi-facebook"></i>
+                  </a>
+                </li>
+                <li class="animated fadeInRight animation-delay-1">
+                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                    <i class="zmdi zmdi-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <a href="javascript:void(0)" class="btn-circle btn-circle-primary animated zoomInDown animation-delay-7">
+                <i class="zmdi zmdi-share"></i>
+              </a>
+            </div>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8" data-toggle="modal" data-target="#ms-account-modal">
+              <i class="zmdi zmdi-account"></i>
+            </a>
+            <form class="search-form animated zoomInDown animation-delay-9">
+              <input id="search-box" type="text" class="search-input" placeholder="Search..." name="q" />
+              <label for="search-box">
+                <i class="zmdi zmdi-search"></i>
+              </label>
+            </form>
+            <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary sb-toggle-left animated zoomInDown animation-delay-10">
+              <i class="zmdi zmdi-menu"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <nav class="navbar navbar-static-top yamm ms-navbar ms-navbar-primary">
+        <div class="container container-full">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index-2.html">
+              <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> -->
+              <span class="ms-logo ms-logo-sm">P</span>
+              <span class="ms-title">Psixologik
+                <strong>Portal</strong>
+              </span>
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn animation-delay-4" data-toggle="dropdown" data-hover="dropdown" data-name="home">Bosh sahifa
+                  <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                </a>
+                
+              </li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn animation-delay-5" data-toggle="dropdown" data-hover="dropdown" data-name="page">Biz haqimizda
+                  <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                </a>
+              </li>
+
+              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="blog">Mega Portal
+                  <i class="zmdi zmdi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-view-compact"></i>Psixologlarga</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-view-compact"></i> Pedagoglarga</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-view-dashboard"></i> Ota-onalarga</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-view-dashboard"></i> Pedagoglar bilan ishlash</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi zmdi-view-stream"></i> Bolajonlar bilan ishlash</a>
+                  </li>
+                 
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-7" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="blog">Hujjatlar
+                  <i class="zmdi zmdi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-view-compact"></i> Normativ huquqiy hujjatlar</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-view-compact"></i> Tashkiliy hujjatlar</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-view-dashboard"></i> Psixolog attestatsiyasi</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-view-dashboard"></i>O'zini o'zi rivojlantirish</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi zmdi-view-stream"></i> Malaka oshirish</a>
+                  </li>
+
+                  
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-8" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="portfolio">Mahsulotlar
+                  <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                </a>
+                
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Foydali kitoblar
+                  <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                </a>
+               
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle animated fadeIn animation-delay-9" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-name="ecommerce">Bog'lanish
+                  <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+                </a>
+              
+              </li>
+              <!-- <li class="btn-navbar-menu"><a href="javascript:void(0)" class="sb-toggle-left"><i class="zmdi zmdi-menu"></i></a></li> -->
+            </ul>
+          </div>
+          <!-- navbar-collapse collapse -->
+          <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu">
+            <i class="zmdi zmdi-menu"></i>
+          </a>
+        </div>
+        <!-- container -->
+      </nav>
+
+
+      <div class="material-background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card animated materialUp animation-delay-5" ">
+                <div class="card-block card-block-big ">
+                    <h1 class="no-mt ">Yangilik sarlavhasi</h1>
+                    <div class="mb-4 ">
+                        <img src="assets/img/demo/avatar50.jpg" alt="... " class="img-circle mr-1 ">
+
+                        <a href="javascript:void(0) ">Admin</a> dan
+                         <a href="javascript:void(0) " class="ms-tag ms-tag-info ">Yangiliklar</a> sahifasi
+                        <span class="ml-1 hidden-xs ">
+                          <i class="zmdi zmdi-time mr-05 color-info "></i> 
+                          <span class="color-medium-dark ">15 Aprel, 2021</span>
+                        </span>
+                        <span class="ml-1 ">
+                          <i class="zmdi zmdi-comments color-royal mr-05 "></i> 25</span>
+                    </div>
+                    <img src="assets/img/demo/postG3.jpg" alt=" " class="img-responsive mb-4
+              ">
+                    <p>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.<strong>Bu yerda ushbu saytga tegishli bo'lgan</strong>  ma'lumotlar ketma-ketligi joylashtiriladi. <a href="# ">Bu yerda</a>  ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</p>
+                    <blockquote class="blockquote-big ">
+                        <p>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</p>
+                        <footer>Bazi bir fikrlar <cite title="Source Title "> yangilik muallifidan</cite></footer>
+                    </blockquote>
+                    <p>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</p>
+                    <h3 class="color-primary ">Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</h3>
+                    <p>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi. <strong>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</strong>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi..</p>
+                    <img src="assets/img/demo/avatar2.jpg" alt=" " class="imgborder ml-2 mb-2 pull-right ">
+                    <p>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</p>
+                    <p>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi. <span class="color-royal ">Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</span> Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</p>
+                    <blockquote cite=" ">
+                       Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.
+                    </blockquote>
+                    <p>Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div> <!-- container -->
+
+ <!-- container -->
+      <aside class="ms-footbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 ms-footer-col">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Sayt xaritasi</h3>
+                <ul class="list-unstyled ms-icon-list three_cols">
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-home"></i> Bosh sahifa</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-edit"></i> Biz haqimizda</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-image-o"></i> Mega portal</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-case"></i> Hujjatlar</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-time"></i> Mahsulotlar</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-money"></i> Foydali kitoblar</a>
+                  </li>
+                 
+                  <li>
+                    <a href="#">
+                      <i class="zmdi zmdi-email"></i> Bog'lanish</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Obuna bo'lish</h3>
+                <p class="">Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</p>
+                <form>
+                  <div class="form-group label-floating mt-2 mb-1">
+                    <div class="input-group ms-input-subscribe">
+                      <label class="control-label" for="ms-subscribe">
+                        <i class="zmdi zmdi-email"></i> Email Adress</label>
+                      <input type="email" id="ms-subscribe" class="form-control"> </div>
+                  </div>
+                  <button class="ms-subscribre-btn" type="button">Obuna bo'lish</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-7 ms-footer-col ms-footer-alt-color">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title text-center mb-2">So'ngi yangiliklar</h3>
+                <div class="ms-footer-media">
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2021</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">Design</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2021</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">Yangiliklar</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <div class="media-left media-middle">
+                      <a href="javascript:void(0)">
+                        <img class="media-object media-object-circle" src="assets/img/demo/p75.jpg" alt="..."> </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                        <a href="javascript:void(0)">Bu yerda ushbu saytga tegishli bo'lgan ma'lumotlar ketma-ketligi joylashtiriladi.</a>
+                      </h4>
+                      <div class="media-footer">
+                        <span>
+                          <i class="zmdi zmdi-time color-info-light"></i> August 18, 2021</span>
+                        <span>
+                          <i class="zmdi zmdi-folder-outline color-warning-light"></i>
+                          <a href="javascript:void(0)">Yangiliklar</a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-5 ms-footer-col ms-footer-text-right">
+              <div class="ms-footbar-block">
+                <div class="ms-footbar-title">
+                  <span class="ms-logo ms-logo-white ms-logo-sm mr-1">P</span>
+                  <h3 class="no-m ms-site-title">Psixologik
+                    <span>Portal</span>
+                  </h3>
+                </div>
+                <address class="no-mb">
+                  <p>
+                    <i class="color-danger-light zmdi zmdi-pin mr-1"></i> Toshkent, A.Temur ko'chasi, 600</p>
+                  <p>
+                    <i class="color-warning-light zmdi zmdi-map mr-1"></i> O'zbekiston, CA 94107</p>
+                  <p>
+                    <i class="color-info-light zmdi zmdi-email mr-1"></i>
+                    <a href="mailto:joe@example.com">example@domain.com</a>
+                  </p>
+                  <p>
+                    <i class="color-royal-light zmdi zmdi-phone mr-1"></i>+998 11 123 45 67 </p>
+                  <p>
+                    <i class="color-success-light fa fa-fax mr-1"></i>+998 11 123 45 67  </p>
+                </address>
+              </div>
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">Ijtimoiy tarmoqlar</h3>
+                <div class="ms-footbar-social">
+                  <a href="javascript:void(0)" class="btn-circle btn-facebook">
+                    <i class="zmdi zmdi-facebook"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-twitter">
+                    <i class="zmdi zmdi-twitter"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-youtube">
+                    <i class="zmdi zmdi-youtube"></i>
+                  </a>
+                  <br>
+                  <a href="javascript:void(0)" class="btn-circle btn-google">
+                    <i class="zmdi zmdi-google"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-instagram">
+                    <i class="zmdi zmdi-instagram"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="btn-circle btn-github">
+                    <i class="zmdi zmdi-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <footer class="ms-footer">
+        <div class="container">
+          <p>Copyright &copy; Psixologik portal 2021</p>
+        </div>
+      </footer>
+
+<div class="btn-back-top ">
+    <a href="# " data-scroll id="back-top " class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised "><i class="zmdi zmdi-long-arrow-up "></i></a>
+</div>
+
+</div> <!-- sb-site-container -->
+
+
+<script src="assets/js/plugins.min.js"></script>
+
+<script src="assets/js/app.min.js"></script>
+
+<script src="assets/js/configurator.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90917746-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+<!-- Mirrored from agmstudio.io/themes/material-style/1.3.2/blog-post2.html by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 31 Mar 2017 11:26:52 GMT -->
+</html>

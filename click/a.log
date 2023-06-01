@@ -1,0 +1,188 @@
+start
+start
+start
+start
+start
+start
+in session
+start
+start
+payment
+start
+payment
+start
+payment
+newconfig
+newmodel
+newhelper
+newrequest
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment
+newconfig
+newmodel
+newhelper
+newrequest
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+Update `orders` SET state='1', modified='2021-12-21 18:55:08' WHERE id = 43
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+Update `orders` SET state='1' WHERE id = 43
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_id":null,"status":"1","status_note":null,"created":"2021-12-21 18:12:12","modified":"2021-12-21 18:12:12","currency":"UZS","total":"500.00","amount":"500.00","delivery":0,"tax":0,"description":"","user_id":"21","invoice_id":null,"payment_id":null,"card_token":null,"token":null,"phone_number":"+998(97) 455-95","merchant_trans_id":"43","note":null}
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_id":null,"status":"1","status_note":null,"created":"2021-12-21 18:12:12","modified":"2021-12-21 18:12:12","currency":"UZS","total":"500.00","amount":"500.00","delivery":0,"tax":0,"description":"","user_id":"21","invoice_id":null,"payment_id":null,"card_token":null,"token":null,"phone_number":"+998(97) 455-95","merchant_trans_id":"43","note":null}
+err
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+errr
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+Update `orders` SET state='2' WHERE id = 43
+start
+payment stop
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"2","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"2","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+Update `orders` SET state='2' WHERE id = 43
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"2","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"2","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+run
+{"id":"43","product_ids":"","amount":"500.00","state":"2","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+{"id":"43","product_ids":"","amount":"500.00","state":"2","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-21 18:12:12"}
+run
+false
+false
+run
+{"id":"59","product_ids":"","amount":"1000.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-22 14:20:08","date":"2021-12-22 14:20:08"}
+{"id":"59","product_ids":"","amount":"1000.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-22 14:20:08","date":"2021-12-22 14:20:08"}
+Update `orders` SET state='1' WHERE id = 59
+run
+{"id":"59","product_ids":"","amount":"1000.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-22 14:20:08","date":"2021-12-22 14:20:08"}
+{"id":"59","product_ids":"","amount":"1000.00","state":"1","user_id":"21","phone":"+998(97) 455-95","type":"click","created_at":"2021-12-22 14:20:08","date":"2021-12-22 14:20:08"}
+Update `orders` SET state='2' WHERE id = 59
+run
+run
+{"id":"71","product_ids":"","amount":"1000.00","state":"1","user_id":"20","phone":"+998(99) 884-21","type":"click","created_at":"2021-12-31 15:31:05","date":"2021-12-31 15:31:05"}
+{"id":"71","product_ids":"","amount":"1000.00","state":"1","user_id":"20","phone":"+998(99) 884-21","type":"click","created_at":"2021-12-31 15:31:05","date":"2021-12-31 15:31:05"}
+Update `orders` SET state='1' WHERE id = 71
+run
+{"id":"71","product_ids":"","amount":"1000.00","state":"1","user_id":"20","phone":"+998(99) 884-21","type":"click","created_at":"2021-12-31 15:31:05","date":"2021-12-31 15:31:05"}
+{"id":"71","product_ids":"","amount":"1000.00","state":"1","user_id":"20","phone":"+998(99) 884-21","type":"click","created_at":"2021-12-31 15:31:05","date":"2021-12-31 15:31:05"}
+Update `orders` SET state='2' WHERE id = 71
+run
+{"id":"119","product_ids":"","amount":"24000.00","state":"1","user_id":"30","phone":"+998(94) 150-55","type":"click","created_at":"2022-01-19 18:34:47","date":"2022-01-19 18:34:47"}
+{"id":"119","product_ids":"","amount":"24000.00","state":"1","user_id":"30","phone":"+998(94) 150-55","type":"click","created_at":"2022-01-19 18:34:47","date":"2022-01-19 18:34:47"}
+Update `orders` SET state='1' WHERE id = 119
+run
+{"id":"119","product_ids":"","amount":"24000.00","state":"1","user_id":"30","phone":"+998(94) 150-55","type":"click","created_at":"2022-01-19 18:34:47","date":"2022-01-19 18:34:47"}
+{"id":"119","product_ids":"","amount":"24000.00","state":"1","user_id":"30","phone":"+998(94) 150-55","type":"click","created_at":"2022-01-19 18:34:47","date":"2022-01-19 18:34:47"}
+Update `orders` SET state='2' WHERE id = 119
+run
+{"id":"120","product_ids":"","amount":"3000.00","state":"1","user_id":"50","phone":"+998(90) 108-17","type":"click","created_at":"2022-01-27 12:16:09","date":"2022-01-27 12:16:09"}
+{"id":"120","product_ids":"","amount":"3000.00","state":"1","user_id":"50","phone":"+998(90) 108-17","type":"click","created_at":"2022-01-27 12:16:09","date":"2022-01-27 12:16:09"}
+Update `orders` SET state='1' WHERE id = 120
+run
+{"id":"120","product_ids":"","amount":"3000.00","state":"1","user_id":"50","phone":"+998(90) 108-17","type":"click","created_at":"2022-01-27 12:16:09","date":"2022-01-27 12:16:09"}
+{"id":"120","product_ids":"","amount":"3000.00","state":"1","user_id":"50","phone":"+998(90) 108-17","type":"click","created_at":"2022-01-27 12:16:09","date":"2022-01-27 12:16:09"}
+Update `orders` SET state='3' WHERE id = 120
+run
+{"id":"131","product_ids":"","amount":"3000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-02-09 21:01:58","date":"2022-02-09 21:01:58"}
+{"id":"131","product_ids":"","amount":"3000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-02-09 21:01:58","date":"2022-02-09 21:01:58"}
+Update `orders` SET state='1' WHERE id = 131
+run
+{"id":"131","product_ids":"","amount":"3000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-02-09 21:01:58","date":"2022-02-09 21:01:58"}
+{"id":"131","product_ids":"","amount":"3000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-02-09 21:01:58","date":"2022-02-09 21:01:58"}
+Update `orders` SET state='2' WHERE id = 131
+run
+{"id":"132","product_ids":"","amount":"10000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-02-12 20:03:27","date":"2022-02-12 20:03:27"}
+{"id":"132","product_ids":"","amount":"10000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-02-12 20:03:27","date":"2022-02-12 20:03:27"}
+Update `orders` SET state='1' WHERE id = 132
+run
+{"id":"132","product_ids":"","amount":"10000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-02-12 20:03:27","date":"2022-02-12 20:03:27"}
+{"id":"132","product_ids":"","amount":"10000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-02-12 20:03:27","date":"2022-02-12 20:03:27"}
+Update `orders` SET state='2' WHERE id = 132
+run
+{"id":"134","product_ids":"","amount":"35000.00","state":"1","user_id":"46","phone":"+998(99) 134-38","type":"click","created_at":"2022-02-25 16:24:40","date":"2022-02-25 16:24:40"}
+{"id":"134","product_ids":"","amount":"35000.00","state":"1","user_id":"46","phone":"+998(99) 134-38","type":"click","created_at":"2022-02-25 16:24:40","date":"2022-02-25 16:24:40"}
+Update `orders` SET state='1' WHERE id = 134
+run
+{"id":"134","product_ids":"","amount":"35000.00","state":"1","user_id":"46","phone":"+998(99) 134-38","type":"click","created_at":"2022-02-25 16:24:40","date":"2022-02-25 16:24:40"}
+{"id":"134","product_ids":"","amount":"35000.00","state":"1","user_id":"46","phone":"+998(99) 134-38","type":"click","created_at":"2022-02-25 16:24:40","date":"2022-02-25 16:24:40"}
+Update `orders` SET state='2' WHERE id = 134
+run
+{"id":"136","product_ids":"","amount":"35000.00","state":"1","user_id":"46","phone":"+998(99) 134-38","type":"click","created_at":"2022-02-25 16:39:13","date":"2022-02-25 16:39:13"}
+{"id":"136","product_ids":"","amount":"35000.00","state":"1","user_id":"46","phone":"+998(99) 134-38","type":"click","created_at":"2022-02-25 16:39:13","date":"2022-02-25 16:39:13"}
+Update `orders` SET state='1' WHERE id = 136
+run
+{"id":"136","product_ids":"","amount":"35000.00","state":"1","user_id":"46","phone":"+998(99) 134-38","type":"click","created_at":"2022-02-25 16:39:13","date":"2022-02-25 16:39:13"}
+{"id":"136","product_ids":"","amount":"35000.00","state":"1","user_id":"46","phone":"+998(99) 134-38","type":"click","created_at":"2022-02-25 16:39:13","date":"2022-02-25 16:39:13"}
+Update `orders` SET state='2' WHERE id = 136
+run
+{"id":"139","product_ids":"","amount":"4000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-04-10 00:12:53","date":"2022-04-10 00:12:53"}
+{"id":"139","product_ids":"","amount":"4000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-04-10 00:12:53","date":"2022-04-10 00:12:53"}
+Update `orders` SET state='1' WHERE id = 139
+run
+{"id":"139","product_ids":"","amount":"4000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-04-10 00:12:53","date":"2022-04-10 00:12:53"}
+{"id":"139","product_ids":"","amount":"4000.00","state":"1","user_id":"67","phone":"+998(90) 071-09","type":"click","created_at":"2022-04-10 00:12:53","date":"2022-04-10 00:12:53"}
+Update `orders` SET state='2' WHERE id = 139

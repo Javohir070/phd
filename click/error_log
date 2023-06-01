@@ -1,0 +1,144 @@
+[24-Nov-2021 18:12:05 Asia/Tashkent] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mttpsixo_psixolog_portal.payments' doesn't exist in /home/mttpsixo/public_html/click/click/models/Model.php:115
+Stack trace:
+#0 /home/mttpsixo/public_html/click/click/models/Model.php(115): PDOStatement->execute()
+#1 /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php(33): click\models\Model->find_by_merchant_trans_id('1')
+#2 /home/mttpsixo/public_html/click/click/applications/Application.php(67): click\models\BasicPaymentMethods->prepare()
+#3 /home/mttpsixo/public_html/click/click/applications/Application.php(132): click\applications\Application->requestHandler(Object(click\models\Payments))
+#4 /home/mttpsixo/public_html/click/index.php(41): click\applications\Application->run()
+#5 /home/mttpsixo/public_html/click/click/applications/Application.php(175): {closure}()
+#6 /home/mttpsixo/public_html/click/index.php(42): click\applications\Application::session('JKhkjANmjHAJjbn...', Array, Object(Closure))
+#7 {main} in /home/mttpsixo/public_html/click/click/models/Model.php on line 115
+[24-Nov-2021 18:12:38 Asia/Tashkent] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mttpsixo_psixolog_portal.payments' doesn't exist in /home/mttpsixo/public_html/click/click/models/Model.php:115
+Stack trace:
+#0 /home/mttpsixo/public_html/click/click/models/Model.php(115): PDOStatement->execute()
+#1 /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php(33): click\models\Model->find_by_merchant_trans_id('1')
+#2 /home/mttpsixo/public_html/click/click/applications/Application.php(68): click\models\BasicPaymentMethods->prepare()
+#3 /home/mttpsixo/public_html/click/click/applications/Application.php(133): click\applications\Application->requestHandler(Object(click\models\Payments))
+#4 /home/mttpsixo/public_html/click/index.php(41): click\applications\Application->run()
+#5 /home/mttpsixo/public_html/click/click/applications/Application.php(176): {closure}()
+#6 /home/mttpsixo/public_html/click/index.php(42): click\applications\Application::session('JKhkjANmjHAJjbn...', Array, Object(Closure))
+#7 {main} in /home/mttpsixo/public_html/click/click/models/Model.php on line 115
+[24-Nov-2021 18:13:15 Asia/Tashkent] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mttpsixo_psixolog_portal.payments' doesn't exist in /home/mttpsixo/public_html/click/click/models/Model.php:115
+Stack trace:
+#0 /home/mttpsixo/public_html/click/click/models/Model.php(115): PDOStatement->execute()
+#1 /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php(33): click\models\Model->find_by_merchant_trans_id('1')
+#2 /home/mttpsixo/public_html/click/click/applications/Application.php(68): click\models\BasicPaymentMethods->prepare()
+#3 /home/mttpsixo/public_html/click/click/applications/Application.php(133): click\applications\Application->requestHandler(Object(click\models\Payments))
+#4 /home/mttpsixo/public_html/click/index.php(41): click\applications\Application->run()
+#5 /home/mttpsixo/public_html/click/click/applications/Application.php(176): {closure}()
+#6 /home/mttpsixo/public_html/click/index.php(42): click\applications\Application::session('JKhkjANmjHAJjbn...', Array, Object(Closure))
+#7 {main} in /home/mttpsixo/public_html/click/click/models/Model.php on line 115
+[10-Dec-2021 14:21:00 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:24:00 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:28:49 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:30:27 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:30:27 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:30:27 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:30:57 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:30:57 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:30:57 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:32:20 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:32:20 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:32:20 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:33:51 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:33:51 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:33:51 Asia/Tashkent] PHP Notice:  Undefined index: type in /home/mttpsixo/public_html/click/click/utils/Helper.php on line 56
+[10-Dec-2021 14:34:57 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 89
+[10-Dec-2021 14:34:57 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 98
+[10-Dec-2021 14:35:33 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 89
+[10-Dec-2021 14:35:33 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 98
+[10-Dec-2021 14:37:37 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 89
+[10-Dec-2021 14:37:37 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 98
+[10-Dec-2021 14:41:38 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 89
+[10-Dec-2021 14:41:38 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 98
+[10-Dec-2021 14:44:21 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 89
+[10-Dec-2021 14:44:21 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 98
+[10-Dec-2021 14:47:07 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 89
+[10-Dec-2021 14:47:07 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 98
+[10-Dec-2021 14:48:06 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 93
+[10-Dec-2021 14:48:06 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 102
+[10-Dec-2021 14:48:24 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 93
+[10-Dec-2021 14:48:24 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 102
+[10-Dec-2021 14:52:44 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 98
+[10-Dec-2021 14:52:44 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 107
+[10-Dec-2021 15:01:01 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 98
+[10-Dec-2021 15:01:01 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 107
+[10-Dec-2021 15:28:25 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[10-Dec-2021 15:43:37 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:16:30 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:17:42 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:39:06 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:40:26 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:41:39 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:43:25 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:44:48 Asia/Tashkent] PHP Parse error:  syntax error, unexpected ')' in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:46:15 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 91
+[21-Dec-2021 18:46:15 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:48:57 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 91
+[21-Dec-2021 18:48:57 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 101
+[21-Dec-2021 18:48:57 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 105
+[21-Dec-2021 18:49:58 Asia/Tashkent] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mttpsixo_psixolog_portal.payments' doesn't exist in /home/mttpsixo/public_html/click/click/models/Model.php:166
+Stack trace:
+#0 /home/mttpsixo/public_html/click/click/models/Model.php(166): PDOStatement->execute()
+#1 /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php(82): click\models\Model->update_by_id('43', Array)
+#2 /home/mttpsixo/public_html/click/click/applications/Application.php(64): click\models\BasicPaymentMethods->prepare()
+#3 /home/mttpsixo/public_html/click/click/applications/Application.php(129): click\applications\Application->requestHandler(Object(click\models\Payments))
+#4 /home/mttpsixo/public_html/click/index.php(42): click\applications\Application->run()
+#5 /home/mttpsixo/public_html/click/click/applications/Application.php(164): {closure}()
+#6 /home/mttpsixo/public_html/click/index.php(43): click\applications\Application::session('JKhkjANmjHAJjbn...', Array, Object(Closure))
+#7 {main}
+  th in /home/mttpsixo/public_html/click/click/models/Model.php on line 166
+[21-Dec-2021 18:53:25 Asia/Tashkent] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'modified' in 'field list' in /home/mttpsixo/public_html/click/click/models/Model.php:166
+Stack trace:
+#0 /home/mttpsixo/public_html/click/click/models/Model.php(166): PDOStatement->execute()
+#1 /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php(82): click\models\Model->update_by_id('43', Array)
+#2 /home/mttpsixo/public_html/click/click/applications/Application.php(64): click\models\BasicPaymentMethods->prepare()
+#3 /home/mttpsixo/public_html/click/click/applications/Application.php(129): click\applications\Application->requestHandler(Object(click\models\Payments))
+#4 /home/mttpsixo/public_html/click/index.php(42): click\applications\Application->run()
+#5 /home/mttpsixo/public_html/click/click/applications/Application.php(164): {closure}()
+#6 /home/mttpsixo/public_html/click/index.php(43): click\applications\Application::session('JKhkjANmjHAJjbn...', Array, Object(Closure))
+#7 {main}
+  thrown in /home/mttpsixo/public_html/click/click/models/Model.php on line 166
+[21-Dec-2021 18:55:08 Asia/Tashkent] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'modified' in 'field list' in /home/mttpsixo/public_html/click/click/models/Model.php:171
+Stack trace:
+#0 /home/mttpsixo/public_html/click/click/models/Model.php(171): PDOStatement->execute()
+#1 /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php(82): click\models\Model->update_by_id('43', Array)
+#2 /home/mttpsixo/public_html/click/click/applications/Application.php(64): click\models\BasicPaymentMethods->prepare()
+#3 /home/mttpsixo/public_html/click/click/applications/Application.php(129): click\applications\Application->requestHandler(Object(click\models\Payments))
+#4 /home/mttpsixo/public_html/click/index.php(42): click\applications\Application->run()
+#5 /home/mttpsixo/public_html/click/click/applications/Application.php(164): {closure}()
+#6 /home/mttpsixo/public_html/click/index.php(43): click\applications\Application::session('JKhkjANmjHAJjbn...', Array, Object(Closure))
+#7 {main}
+  thrown in /home/mttpsixo/public_html/click/click/models/Model.php on line 171
+[21-Dec-2021 18:55:37 Asia/Tashkent] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mttpsixo_psixolog_portal.payments' doesn't exist in /home/mttpsixo/public_html/click/click/models/Model.php:74
+Stack trace:
+#0 /home/mttpsixo/public_html/click/click/models/Model.php(74): PDOStatement->execute()
+#1 /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php(102): click\models\Model->find_by_id('43')
+#2 /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php(118): click\models\BasicPaymentsErrors->request_check(Array)
+#3 /home/mttpsixo/public_html/click/click/applications/Application.php(67): click\models\BasicPaymentMethods->complete()
+#4 /home/mttpsixo/public_html/click/click/applications/Application.php(129): click\applications\Application->requestHandler(Object(click\models\Payments))
+#5 /home/mttpsixo/public_html/click/index.php(42): click\applications\Application->run()
+#6 /home/mttpsixo/public_html/click/click/applications/Application.php(164): {closure}()
+#7 /home/mttpsixo/public_h in /home/mttpsixo/public_html/click/click/models/Model.php on line 74
+[21-Dec-2021 19:02:58 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 114
+[21-Dec-2021 19:02:58 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 124
+[21-Dec-2021 19:02:58 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 128
+[21-Dec-2021 19:02:58 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 114
+[21-Dec-2021 19:02:58 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 124
+[21-Dec-2021 19:02:58 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 128
+[21-Dec-2021 19:06:31 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 124
+[21-Dec-2021 19:06:31 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 134
+[21-Dec-2021 19:06:31 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 139
+[21-Dec-2021 19:07:57 Asia/Tashkent] PHP Notice:  Undefined index: status in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 124
+[21-Dec-2021 19:07:57 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 134
+[21-Dec-2021 19:07:57 Asia/Tashkent] PHP Notice:  Undefined index: total in /home/mttpsixo/public_html/click/click/models/BasicPaymentsErrors.php on line 145
+[31-Dec-2021 15:30:28 Asia/Tashkent] PHP Notice:  Undefined index: merchant_trans_id in /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php on line 33
+[31-Dec-2021 15:30:28 Asia/Tashkent] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and `type`='click'' at line 1 in /home/mttpsixo/public_html/click/click/models/Model.php:115
+Stack trace:
+#0 /home/mttpsixo/public_html/click/click/models/Model.php(115): PDOStatement->execute()
+#1 /home/mttpsixo/public_html/click/click/models/BasicPaymentMethods.php(33): click\models\Model->find_by_merchant_trans_id(NULL)
+#2 /home/mttpsixo/public_html/click/click/applications/Application.php(64): click\models\BasicPaymentMethods->prepare()
+#3 /home/mttpsixo/public_html/click/click/applications/Application.php(129): click\applications\Application->requestHandler(Object(click\models\Payments))
+#4 /home/mttpsixo/public_html/click/index.php(33): click\applications\Application->run()
+#5 /home/mttpsixo/public_html/click/click/applications/Application.php(164): {closure}()
+#6 /home/mttpsixo/public_html/ in /home/mttpsixo/public_html/click/click/models/Model.php on line 115
