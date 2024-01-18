@@ -44,9 +44,9 @@ class Bemor extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['last_name', 'first_name', 'middle_name', 'birth_day', 'email', 'jinsi',  'olingan_signal', 'signal_1', 'signal_2', 'signal_3', 'signal_4', 'tashxis', 'tashxis_file', 'manzili'], 'required'],
-            [['birth_day', 'created_at', 'updated_at'], 'integer'],
-            [['last_name', 'first_name', 'middle_name', 'email'], 'string', 'max' => 255],
+            [['last_name', 'first_name', 'middle_name', 'birth_day', 'viloyat_id', 'tuman_id', 'email', 'jinsi',  'olingan_signal', 'signal_1', 'signal_2', 'signal_3', 'signal_4', 'tashxis', 'tashxis_file', 'manzili'], 'required'],
+            [[ 'created_at','status', 'updated_at'], 'integer'],
+            [['last_name', 'birth_day', 'first_name', 'middle_name', 'email'], 'string', 'max' => 255],
             [['telefon'], 'string', 'max' => 200],
             [['jinsi'], 'string', 'max' => 100],
             [['olingan_signal', 'tashxis', 'manzili'], 'string', 'max' => 1024],
@@ -63,6 +63,8 @@ class Bemor extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'viloyat_id'=>"Viloyat",
+            'tuman_id'=>"Tuman",
             'last_name' => 'Familiya',
             'first_name' => 'Ism',
             'middle_name' => 'Sharif',
@@ -70,6 +72,7 @@ class Bemor extends \yii\db\ActiveRecord
             'telefon' => 'Telefon',
             'email' => 'Email',
             'jinsi' => 'Jinsi',
+            'status' => 'Status',
             'created_at' => 'Yaratilgan sana',
             'updated_at' => 'O\'zgartirilgan sana',
             'olingan_signal' => 'Olingan Signal',
@@ -83,6 +86,37 @@ class Bemor extends \yii\db\ActiveRecord
             'avatar' => 'Rasm',
         ];
     }
+    public function beforeSave($insert)
+    {
+        if ($insert) {
+            $this->status = 1;
+            //$this->narx = 0;
+            //if (!is_integer($this->created_date)) $this->created_date = strtotime($this->created_date);
+            //else 
+                $this->created_at = time();
+            //$this->viloyat_id = Yii::$app->user->identity->hudud_id;
+        }else{
+            //$this->created_date = time();
+            $this->created_at = strtotime($this->created_at);
+        }
+
+        // ...custom code here...
+        return parent::beforeSave($insert);
+    }
+    public function afterFind()
+    {
+        if (is_integer($this->created_at)) {
+            $this->created_at = date('d-m-Y',$this->created_at);
+        }
+        if (is_integer($this->birth_day)) {
+            $this->birth_day = date('d-m-Y',$this->birth_day);
+        }
+        if (is_integer($this->updated_at)) {
+            $this->updated_at = date('d-m-Y',$this->updated_at);
+        }
+        return parent::afterFind();
+    }
+    
     // public function uploadrasm()
     // {
     //         $this->rasm = UploadedFile::getInstance($this, 'rasm');
@@ -211,5 +245,24 @@ class Bemor extends \yii\db\ActiveRecord
             }
         
     }
-    
+    public function getKasbi()
+    {
+        return $this->hasOne(Kasblar::className(),['id'=>'kasb_id']);
+    }
+
+    public function getRegion()
+    {
+        return $this->hasOne(Viloyat::className(),['viloyat_id'=>'viloyat_id']);
+    }
+
+    public function getDistrict()
+    {
+        return $this->hasOne(Tuman::className(),['tuman_id'=>'tuman_id']);
+    }
+
+    public function getGender()
+    {
+        return $this->hasOne(Gender::className(),['id'=>'gender_id']);
+    }
+
 }

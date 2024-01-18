@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\helpers\Url;
 use app\models\Bemor;
+use yii\widgets\DetailView;
+use app\models\Tavsiya;
 $abs= app\models\Bemor::find()->all();
 
 /* @var $this yii\web\View */
@@ -91,33 +93,40 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="card-body">
                     <div class="table-responsive">
                         <div class="grid-view">
-                            <div class="summary">Showing <b>1-4</b> of <b>4</b> items.</div>
+                            <div class="summary">Showing <b>1-4 </b> of <b>4</b> items.</div>
                             <table class="table table-striped table-bordered" id="emp-table">
                                 <thead>
                                     <tr>
-                                        <th col-index=1 >#</th>
-                                        <th col-index=2 ><a href="/bemor/index?sort=id" data-sort="id">ID</a></th>
-                                        <th col-index=3 ><a href="/bemor/index?sort=avatar" data-sort="avatar">Rasm</a></th>
-                                        <th col-index=4 >Familiya
+                                        <th col-index=1 ><a href="/bemor/index?sort=id" data-sort="id">ID</a></th>
+                                        <th col-index=2 ><a href="/bemor/index?sort=avatar" data-sort="avatar">Rasm</a></th>
+                                        <th col-index=3 >Familiya
                                             <select class="table-filter" onchange="filter_rows()">
                                             <option value="all"></option>
                                         </select>
                                         </th>
-                                        <th col-index=5 >Ism 
+                                        <th col-index=4 >Ism 
                                             <select class="table-filter" onchange="filter_rows()">
                                             <option value="all"></option>
                                         </select>
                                             </th>
-                                        <th col-index=6 >Sharif 
+                                        <th col-index=5 >Sharif 
                                             <select class="table-filter" onchange="filter_rows()">
                                             <option value="all"></option>
                                         </select>
                                         </th>
                                         <th><a href="/bemor/index?sort=birth_day" data-sort="birth_day">Tug'ilgan
                                                 sana</a></th>
+                                                <th><a href="/bemor/index?sort=birth_day" data-sort="birth_day">Yosh</a></th>
                                         <th><a href="/bemor/index?sort=telefon" data-sort="telefon">Telefon</a></th>
                                         <th><a href="/bemor/index?sort=email" data-sort="email">Email</a></th>
-                                        <th><a href="/bemor/index?sort=jinsi" data-sort="jinsi">Jinsi</a></th>
+                                        <th col-index=10>Jinsi
+                                            <select class="table-filter" onchange="filter_rows()">
+                                                <option value="all"></option>
+                                        </th>
+                                        <th col-index=11>Tashxis
+                                            <select class="table-filter" onchange="filter_rows()">
+                                                <option value="all"></option>
+                                        </th>
                                         <th><a href="/bemor/index?sort=created_at" data-sort="created_at">Yaratilgan
                                                 sana</a></th>
                                         <th><a href="/bemor/index?sort=updated_at" data-sort="updated_at">O'zgartirilgan
@@ -128,9 +137,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <th><a href="/bemor/index?sort=signal_2" data-sort="signal_2">Signal 2</a></th>
                                         <th><a href="/bemor/index?sort=signal_3" data-sort="signal_3">Signal 3</a></th>
                                         <th><a href="/bemor/index?sort=signal_4" data-sort="signal_4">Signal 4</a></th>
-                                        <th><a href="/bemor/index?sort=tashxis" data-sort="tashxis">Tashxis</a></th>
-                                        <th><a href="/bemor/index?sort=tashxis_file" data-sort="tashxis_file">Tashxis
-                                                Fayli</a></th>
+                                        <th><a href="/bemor/index?sort=tashxis" data-sort="tashxis">Tashxis Fayli</a></th>
+                                        <th col-index=20>Viloyati
+                                                <select class="table-filter" onchange="filter_rows()">
+                                                <option value="all"></option>
+                                        </th>
+                                        <th col-index=21>Tuman
+                                                <select class="table-filter" onchange="filter_rows()">
+                                                <option value="all"></option></th>
                                         <th><a href="/bemor/index?sort=manzili" data-sort="manzili">Manzili</a></th>
                                         <th class="action-column">&nbsp;</th>
                                     </tr>
@@ -138,17 +152,18 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <tbody>
                                     <?php foreach($abs as $r){?>
                                     <tr data-key="13">
-                                        <td><?php echo $r + 1 ?></td>
                                         <td><?=$r->id?></td>
-                                        <td><img src="/<?=$r->avatar?>" width="50"
+                                        <td><img src="/<?=($r->avatar)?$r->avatar:'uploads/bemor/rasm/2023/Nov/07/hISAl-BJZBIR.png'?>" width="50"
                                                 alt=""></td>
                                         <td><?=$r->last_name?></td>
                                         <td><?=$r->first_name?></td>
                                         <td><?=$r->middle_name?></td>
-                                        <td><?=$r->birth_day?></td>
+                                        <td><?php echo date("d-m-Y",strtotime($r->birth_day));?></td>
+                                        <td><?php echo (2024- date("Y",strtotime($r->birth_day)));?></td>
                                         <td><?=$r->telefon?></td>
                                         <td><a href="mailto:s.makhmudjanov@gmail.com"><?=$r->email?></a></td>
                                         <td><?=$r->jinsi?></td>
+                                        <td><?=$r->tashxis?></td>
                                         <td><?=$r->created_at?></td>
                                         <td><?=$r->updated_at?></td>
                                         <td><?=$r->olingan_signal?></td>
@@ -156,8 +171,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?=$r->signal_2?></td>
                                         <td><?=$r->signal_3?></td>
                                         <td><?=$r->signal_4?></td>
-                                        <td><?=$r->tashxis?></td>
                                         <td><?=$r->tashxis_file?></td>
+                                        <td><?=!empty($r->region)?$r->region->viloyat_nomi:''?></td>
+                                        <td><?=!empty($r->district)?$r->district->tuman_nomi:''?></td>
                                         <td><?=$r->manzili?></td>
                                         <td><a href="/bemor/view/<?=$r->id?>" title="View" aria-label="View" data-pjax="0"><span
                                                     class="glyphicon glyphicon-eye-open"><i class="ft-eye text-success"></i></span></a> <a

@@ -95,7 +95,7 @@ class BemorController extends Controller
 
        if ($model->load(Yii::$app->request->post())) {
         //    $model->uploadrasm();
-        //    $model->uploadavatar();
+           $model->uploadavatar();
            $model->uploadolingan_signal();
            $model->uploadtashxis_file();
            $model->uploadsignal_1();
@@ -144,12 +144,12 @@ class BemorController extends Controller
     {
         $model = $this->findModel($id);
 
-        $rasm = $model->rasm; //var_dump($rasm);exit;
+        $avatar = $model->avatar; //var_dump($avatar);exit;
 
 
         if ($model->load(Yii::$app->request->post())) {
-            if($model->rasm!=null){ $model->uploadrasm();}
-            else{  $model->rasm=$rasm;}
+            if($model->avatar!=null){ $model->uploadavatar();}
+            else{  $model->avatar=$avatar;}
 
             if(!$model->save()){
                 echo '<pre>';
