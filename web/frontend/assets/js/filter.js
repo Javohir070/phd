@@ -86,6 +86,8 @@ function filter_rows() {
         allFilters.forEach((filter_i) => {
             col_index = filter_i.parentElement.getAttribute('col-index')
             col_cell_value_dict[col_index] = row.querySelector("td:nth-child(" + col_index+ ")").innerHTML
+           
+            
         })
 
         for (var col_i in filter_value_dict) {
@@ -94,6 +96,7 @@ function filter_rows() {
             
             if (row_cell_value.indexOf(filter_value) == -1 && filter_value != "all") {
                 display_row = false;
+                
                 break;
             }
 
@@ -102,7 +105,16 @@ function filter_rows() {
 
         if (display_row == true) {
             row.style.display = "table-row"
-
+            let obj = [];
+            for (let i = 0; i < display_row; i++) {
+                let a = i;
+                console.log(a);
+                 obj.push(a);
+                
+            }
+            console.log(obj + ' salom');
+            
+            
         } else {
             row.style.display = "none"
 

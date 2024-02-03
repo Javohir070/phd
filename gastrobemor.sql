@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 29 2023 г., 16:35
+-- Время создания: Янв 18 2024 г., 17:23
 -- Версия сервера: 5.6.41
--- Версия PHP: 7.1.22
+-- Версия PHP: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -89,7 +89,7 @@ CREATE TABLE `bemor` (
   `last_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `first_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `middle_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `birth_day` int(11) NOT NULL,
+  `birth_day` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `telefon` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `jinsi` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
@@ -105,16 +105,43 @@ CREATE TABLE `bemor` (
   `manzili` varchar(1024) COLLATE utf8_unicode_ci NOT NULL,
   `avatar` varchar(2048) COLLATE utf8_unicode_ci DEFAULT NULL,
   `viloyat_id` int(11) NOT NULL,
-  `tuman_id` int(11) NOT NULL
+  `tuman_id` int(11) NOT NULL,
+  `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Дамп данных таблицы `bemor`
 --
 
-INSERT INTO `bemor` (`id`, `last_name`, `first_name`, `middle_name`, `birth_day`, `telefon`, `email`, `jinsi`, `created_at`, `updated_at`, `olingan_signal`, `signal_1`, `signal_2`, `signal_3`, `signal_4`, `tashxis`, `tashxis_file`, `manzili`, `avatar`, `viloyat_id`, `tuman_id`) VALUES
-(13, 'Maxmudjanov', 'Sarvar', 'Ulug\'bekovich', 0, '+998(99) 950-29-58', 's.makhmudjanov@gmail.com', 'erkak', 1633775087, 1638350964, '', '', '', '', '', '', '', 'Toshkent', 'uploads/user/avatar/2021/Dec/01/xJ7HvT7wT13q.jpg', 0, 0),
-(32, 'Aliqulov', 'Akmal', 'Xushmuratovich', 0, '+998(93) 600-01-11', 'akmalaliqulov@gmail.com', 'erkak', 1641384743, 1641385416, '', '', '', '', '', '', '', 'Toshkent', 'uploads/user/avatar/2022/Jan/05/Gds9BXtPCZFK.jpg', 0, 0);
+INSERT INTO `bemor` (`id`, `last_name`, `first_name`, `middle_name`, `birth_day`, `telefon`, `email`, `jinsi`, `created_at`, `updated_at`, `olingan_signal`, `signal_1`, `signal_2`, `signal_3`, `signal_4`, `tashxis`, `tashxis_file`, `manzili`, `avatar`, `viloyat_id`, `tuman_id`, `status`) VALUES
+(1, 'Bakuradze', 'D.', 'B.', '1699390800', '+998991234567', 'bakuradze@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/IR7FewXfHaxt.txt', 'uploads/bemor/signals/2023/Nov/07/a6elxOgaW6NA.txt', 'uploads/bemor/signals/2023/Nov/07/KA5JLQvTyLe2.txt', 'uploads/bemor/signals/2023/Nov/07/eN7V97Zf8kRd.txt', 'uploads/bemor/signals/2023/Nov/07/4KWryWNqXif5.txt', 'Gastrit', 'uploads/bemor/signals/2023/Nov/07/2ATIbS3E9WS2.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/hxGiGlTpEGXD.jpg', 1, 1, 1),
+(2, 'Jdanov', 'M', 'Z', '903124800', '+998991234567', 'jdanov@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/bcP2qqGNlsRf.txt', 'uploads/bemor/signals/2023/Nov/07/iTPYjZ-vp-cX.txt', 'uploads/bemor/signals/2023/Nov/07/pzoQcCQeXSQB.txt', 'uploads/bemor/signals/2023/Nov/07/bVs8kwRCcDi2.txt', 'uploads/bemor/signals/2023/Nov/07/EmBDJQLg5s-s.txt', 'Ulserativ kolit', 'uploads/bemor/signals/2023/Nov/07/FDCpDxcA9a4A.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/NvTRcG_iCLl5.jpg', 1, 2, 0),
+(3, 'Tkach', 'A.', 'F.', '380149200', '+998991234567', 'tkach@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/eosPzQsy_S00.txt', 'uploads/bemor/signals/2023/Nov/07/mSx8Q9bBaj16.txt', 'uploads/bemor/signals/2023/Nov/07/Y1K8ZxLKWwP2.txt', 'uploads/bemor/signals/2023/Nov/07/p8wBf9YkqBrt.txt', 'uploads/bemor/signals/2023/Nov/07/9E1RCxBR30Qr.txt', 'Crohn kasalligi', 'uploads/bemor/signals/2023/Nov/07/nHyCpZjpSCYH.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/A6pttxcGZL8f.jpg', 2, 16, 0),
+(4, 'Ahalaya', 'K.', 'T.', '78958800', '+998991234567', 'ahalayakt@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/sYfDqbiyK6ho.txt', 'uploads/bemor/signals/2023/Nov/07/ASpdkwH6P3J5.txt', 'uploads/bemor/signals/2023/Nov/07/xhZYpEndHahW.txt', 'uploads/bemor/signals/2023/Nov/07/mrKeE_ApuIDC.txt', 'uploads/bemor/signals/2023/Nov/07/zElevBNUZtpP.txt', 'Gepatit', 'uploads/bemor/signals/2023/Nov/07/2B9_5aoMIfsy.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/hISAl-BJZBIR.png', 2, 20, 0),
+(5, 'Amelin', 'V.', 'A.', '1684357200', '+998991234567', 'amelin@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/Rd1MMnSiFLQD.txt', 'uploads/bemor/signals/2023/Nov/07/QV3ZL2q_oNQW.txt', 'uploads/bemor/signals/2023/Nov/07/Mjjc3k0KVeTc.txt', 'uploads/bemor/signals/2023/Nov/07/2CMtqmOCAULU.txt', 'uploads/bemor/signals/2023/Nov/07/pANNqH78bx8W.txt', 'Diareya', 'uploads/bemor/signals/2023/Nov/07/mYstGqR4c0qf.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/IMZhJQRSh7X3.png', 4, 46, 0),
+(6, 'Amonov', 'S.', 'S.', '809640000', '+998991234567', 'amonov@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/EsD6hzdYeEb4.txt', 'uploads/bemor/signals/2023/Nov/07/NUSYnoKAfWN_.txt', 'uploads/bemor/signals/2023/Nov/07/rxOCPpYfD2H7.txt', 'uploads/bemor/signals/2023/Nov/07/lDatyI5JF_l3.txt', 'uploads/bemor/signals/2023/Nov/07/BS2SsWxW2Wm9.txt', 'Pilorik stenoz', 'uploads/bemor/signals/2023/Nov/07/naGPKugc_4FG.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/HcbLygLxMO9g.png', 3, 36, 0),
+(7, 'Andreanov', 'D', 'Y', '574808400', '+998991234567', 'andreanov@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/azUaqcviWgx5.txt', 'uploads/bemor/signals/2023/Nov/07/VL2AZEmbOm4X.txt', 'uploads/bemor/signals/2023/Nov/07/PvQ60a901sXQ.txt', 'uploads/bemor/signals/2023/Nov/07/HGVVhjS6l9zX.txt', 'uploads/bemor/signals/2023/Nov/07/WmBvdT8asWeP.txt', 'Atrofik gastrit', 'uploads/bemor/signals/2023/Nov/07/pTa7Yl6Q9iwp.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/F5SZjtJLoeWT.png', 5, 63, 0),
+(8, 'Azamov', 'O.', 'A.', '664750800', '+998991234567', 'azamov@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/HePJNxuikP3j.txt', 'uploads/bemor/signals/2023/Nov/07/D6tFCc8IiefT.txt', 'uploads/bemor/signals/2023/Nov/07/wA-iDeWwQgxh.txt', 'uploads/bemor/signals/2023/Nov/07/JjJsEAFSaBJE.txt', 'uploads/bemor/signals/2023/Nov/07/lhC2Y9s5wV9f.txt', 'Oshqozon yarasi', 'uploads/bemor/signals/2023/Nov/07/GoBHYVKiTYRk.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/m5eg2R5tGnSi.png', 12, 164, 0),
+(9, 'Azizova', 'A.', 'A.', '644616000', '+998991234567', 'azizova@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/9SR1r3pkHM37.txt', 'uploads/bemor/signals/2023/Nov/07/cEWEcwuPZ_Gi.txt', 'uploads/bemor/signals/2023/Nov/07/TVloHBY_Gn3W.txt', 'uploads/bemor/signals/2023/Nov/07/VgxaN5hPAauN.txt', 'uploads/bemor/signals/2023/Nov/07/s73QdIzGV0m8.txt', 'Helicobacter pylori', 'uploads/bemor/signals/2023/Nov/07/h7-EQA5qy5f3.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/mR0Zmf3r_bx9.jpg', 4, 51, 0),
+(10, 'Bakoev', 'A.', 'A.', '603838800', '+998991234567', 'bakoev@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Nov/07/no9SBARqy9Wf.txt', 'uploads/bemor/signals/2023/Nov/07/5VQiXAZwWMRD.txt', 'uploads/bemor/signals/2023/Nov/07/RWpwvhlakw11.txt', 'uploads/bemor/signals/2023/Nov/07/P6u5HIWCxKgV.txt', 'uploads/bemor/signals/2023/Nov/07/M-r0TfVgROg_.txt', 'Epstein-Barr virusi', 'uploads/bemor/signals/2023/Nov/07/NTwiw5etoXo8.doc', 'Aniqlanmagan', 'uploads/bemor/rasm/2023/Nov/07/WvUEsdjhRaEr.png', 5, 64, 0),
+(11, 'Abduvaliyev', 'Akbar', 'Shomurod o\'g\'li', '823640400', '+998991234567', 'akbarabduvaliyev@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/tpvh4ZdBllZv.txt', 'uploads/bemor/signals/2023/Dec/14/xKu8YYYSMXa6.txt', 'uploads/bemor/signals/2023/Dec/14/SlSUHWOAG0-r.txt', 'uploads/bemor/signals/2023/Dec/14/cz2evpoHIBpk.txt', 'uploads/bemor/signals/2023/Dec/14/WNNT7dHpQVNC.txt', 'Dispepsiya', 'uploads/bemor/signals/2023/Dec/14/rCj_Hd1D3c9_.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/Bj5Uyb3YHs3n.jpg', 3, 40, 0),
+(12, 'Samadova', 'Nargiza', 'Olimovna', '592606800', '+998991234567', 'nargizaolimovna@gmail.com', 'ayol', 0, 0, 'uploads/bemor/signals/2023/Dec/14/e-1apRQjIQ_I.txt', 'uploads/bemor/signals/2023/Dec/14/zfUIj53EqHRZ.txt', 'uploads/bemor/signals/2023/Dec/14/IJnQoDP0s0tV.txt', 'uploads/bemor/signals/2023/Dec/14/iUxA23V51W66.txt', 'uploads/bemor/signals/2023/Dec/14/FDCysCOWjttI.txt', 'Mezenterik ishemiya', 'uploads/bemor/signals/2023/Dec/14/ylzTWnjeUfYE.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/gsd96kcLcDiS.png', 6, 78, 0),
+(13, 'Zaripova', 'Asila', 'Baxtiyor qizi', '895608000', '+998991234567', 'asilazaripova@gmail.com', 'ayol', 0, 0, 'uploads/bemor/signals/2023/Dec/14/IhENhtlJr_t0.txt', 'uploads/bemor/signals/2023/Dec/14/cI-zItE_ko5c.txt', 'uploads/bemor/signals/2023/Dec/14/sIgotZK-5Wni.txt', 'uploads/bemor/signals/2023/Dec/14/Q12oP7LP-l95.txt', 'uploads/bemor/signals/2023/Dec/14/1g_8H0Z71Rp6.txt', 'Qabziyat', 'uploads/bemor/signals/2023/Dec/14/15hRE6MzlKLA.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/qiaUpkD4UW0_.png', 4, 48, 0),
+(14, 'Ernazarov', 'Qodirbek', 'Rustamovich', '312584400', '+998991234567', 'qodirrustamovich@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/SxT1UeZlfKGg.txt', 'uploads/bemor/signals/2023/Dec/14/7tACIujRA_H_.txt', 'uploads/bemor/signals/2023/Dec/14/UtlMVmiVYbqg.txt', 'uploads/bemor/signals/2023/Dec/14/WLIiDzsmPCCR.txt', 'uploads/bemor/signals/2023/Dec/14/aCkhDNu4c2p1.txt', 'Enterit', 'uploads/bemor/signals/2023/Dec/14/2TYfR1_GjFOF.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/UYVsc1U-DdBf.png', 10, 129, 0),
+(15, 'Karimova', 'Maftuna', 'Jamol qizi', '990129600', '+998991234567', 'maftunaKarimova@gmail.com', 'ayol', 0, 0, 'uploads/bemor/signals/2023/Dec/14/v3vpbt5vAYlP.txt', 'uploads/bemor/signals/2023/Dec/14/XNj2dLAAcwR2.txt', 'uploads/bemor/signals/2023/Dec/14/ZhsFXIGNSRGe.txt', 'uploads/bemor/signals/2023/Dec/14/LB3q9QsanxYW.txt', 'uploads/bemor/signals/2023/Dec/14/YVi_cWgo7fbv.txt', 'Surunkali malabsorbtsiya', 'uploads/bemor/signals/2023/Dec/14/SBZjXR3rKVnc.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/n5olcjfI-68e.png', 9, 121, 0),
+(16, 'Fayozova', 'Fazilat', 'Abdulla qizi', '749941200', '+998991234567', 'fayozovafazilat@gmail.com', 'ayol', 0, 0, 'uploads/bemor/signals/2023/Dec/14/KdHk9nnXnAM9.txt', 'uploads/bemor/signals/2023/Dec/14/ZogcaPga8NE2.txt', 'uploads/bemor/signals/2023/Dec/14/8dsvQT50kYSN.txt', 'uploads/bemor/signals/2023/Dec/14/-NTSIYO8Ipml.txt', 'uploads/bemor/signals/2023/Dec/14/4-NqiG0vl_ai.txt', 'Qisqa ichak sindromi', 'uploads/bemor/signals/2023/Dec/14/QU1wVJfjvtbs.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/Z7Tu61-4PHm5.jpg', 3, 33, 0),
+(17, 'Hamdamov', 'Asror', 'Mustafo o\'g\'li', '647035200', '+998991234567', 'asrorhamdamov@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/ZfFx4d0HIJTa.txt', 'uploads/bemor/signals/2023/Dec/14/UuMQzR4UnrrL.txt', 'uploads/bemor/signals/2023/Dec/14/FiTNLhqeY3ZE.txt', 'uploads/bemor/signals/2023/Dec/14/RveQXkF4xWz1.txt', 'uploads/bemor/signals/2023/Dec/14/G_YyTS1wDzWB.txt', ' Apandisit', 'uploads/bemor/signals/2023/Dec/14/DeCPo6haTMWk.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/313xiVcCvQBH.png', 2, 26, 0),
+(18, 'G\'ulomova', 'Habiba', 'Toshtemirovna', '64098000', '+998991234567', 'habibagulom@gmail.com', 'ayol', 0, 0, 'uploads/bemor/signals/2023/Dec/14/eNGBLX9z_U7S.txt', 'uploads/bemor/signals/2023/Dec/14/v5Wok9BAjSFj.txt', 'uploads/bemor/signals/2023/Dec/14/FIQyvSPR5Ssd.txt', 'uploads/bemor/signals/2023/Dec/14/lt5euCV8eTHw.txt', 'uploads/bemor/signals/2023/Dec/14/MLxTzOHipPuq.txt', ' To\'g\'ri ichakning yallig\'lanishi proktit', 'uploads/bemor/signals/2023/Dec/14/E6eAPMfsSjS8.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/RgAjUt7JI7lp.png', 7, 83, 0),
+(19, 'Abdug\'aniyev', 'Safarmurot', 'Hotamovich', '384642000', '+998991234567', 'abdusafar@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/-vOsle-pGN9C.txt', 'uploads/bemor/signals/2023/Dec/14/u92fFhMQo29t.txt', 'uploads/bemor/signals/2023/Dec/14/Bpootiby-r1c.txt', 'uploads/bemor/signals/2023/Dec/14/FrnrQTN9t51e.txt', 'uploads/bemor/signals/2023/Dec/14/4kY-P2eVRRCv.txt', 'Gastrit', 'uploads/bemor/signals/2023/Dec/14/a3iB7SSFbEdb.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/wJLdmFcGYTbK.png', 5, 70, 0),
+(20, 'Allamurodov', 'Elyor', 'Fozil o\'g\'li', '1695243600', '+998991234567', 'elyorfozil@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/hKIQldTGUYBk.txt', 'uploads/bemor/signals/2023/Dec/14/E3jC06jmCYtf.txt', 'uploads/bemor/signals/2023/Dec/14/DoHj1VWWPJg5.txt', 'uploads/bemor/signals/2023/Dec/14/m_4glQD3fC9q.txt', 'uploads/bemor/signals/2023/Dec/14/xu-VxDAGBrX4.txt', 'Gastrit', 'uploads/bemor/signals/2023/Dec/14/xEPf3rBCcAF5.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/X7dJR-LHrsR9.jpg', 8, 99, 0),
+(21, 'Pardayev', 'Nodir', 'Normurod o\'g\'li', '646257600', '+998991234567', 'nodirpardayev@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/22LrY--a6pHo.txt', 'uploads/bemor/signals/2023/Dec/14/k8LGyKGjsUbl.txt', 'uploads/bemor/signals/2023/Dec/14/x31DWsyrqByC.txt', 'uploads/bemor/signals/2023/Dec/14/WdjFywjwxgSU.txt', 'uploads/bemor/signals/2023/Dec/14/kAvOjArkDF_F.txt', 'Gepatit', 'uploads/bemor/signals/2023/Dec/14/dzSKihyLIUFh.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/XLXGFtTF7mOu.jpg', 9, 112, 0),
+(22, 'Axmedov', 'Alijon', 'Komil o\'g\'li', '672613200', '+998991234567', 'alijonaxmedov@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/kapbeqcUAPRQ.txt', 'uploads/bemor/signals/2023/Dec/14/9r8xdzPqshp6.txt', 'uploads/bemor/signals/2023/Dec/14/YgMgDHro5Q1J.txt', 'uploads/bemor/signals/2023/Dec/14/Ou5dzYRMtWB7.txt', 'uploads/bemor/signals/2023/Dec/14/THSYWtK-LqNj.txt', 'Qisqa ichak sindromi', 'uploads/bemor/signals/2023/Dec/14/f433kIMuk06A.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/VQ22_zIUiNq1.jpg', 8, 95, 0),
+(23, 'Avazova', 'Elmera', 'Shodiyevna', '628203600', '+998991234567', 'elmeraavazova@gmail.com', 'ayol', 0, 0, 'uploads/bemor/signals/2023/Dec/14/fhXits9C8MEm.txt', 'uploads/bemor/signals/2023/Dec/14/lGDTX9h7H5a4.txt', 'uploads/bemor/signals/2023/Dec/14/8xBZntMzpWG2.txt', 'uploads/bemor/signals/2023/Dec/14/KSd7DjYye_TP.txt', 'uploads/bemor/signals/2023/Dec/14/aMyNDSd5ungm.txt', 'Dispepsiya', 'uploads/bemor/signals/2023/Dec/14/1e4ao9I1q697.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/Fb4YBop2NnfK.png', 3, 45, 0),
+(24, 'Bo\'riyev', 'Sherzod', 'Tojiboyevich', '376347600', '+998991234567', 'sherzodburiyev@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/x2a-Eou1SUsE.txt', 'uploads/bemor/signals/2023/Dec/14/3Ro_gnBbwXwE.txt', 'uploads/bemor/signals/2023/Dec/14/uZlaU5Ov0HPZ.txt', 'uploads/bemor/signals/2023/Dec/14/6qcWcfiL8xL1.txt', 'uploads/bemor/signals/2023/Dec/14/diJaZ55KJM8F.txt', 'Diareya', 'uploads/bemor/signals/2023/Dec/14/u9W79oerh1N3.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/c6iqGt_xPCxj.png', 7, 88, 0),
+(25, 'Bozorov', 'Murodjon', 'Fayzullayevich', '-43210800', '+998991234567', 'murodjon@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/RNk3VZZ_Fyrp.txt', 'uploads/bemor/signals/2023/Dec/14/pT_gbTsGvIh8.txt', 'uploads/bemor/signals/2023/Dec/14/9Uu_IXlX-ia9.txt', 'uploads/bemor/signals/2023/Dec/14/gvajJeUeQG5E.txt', 'uploads/bemor/signals/2023/Dec/14/-8z3L9iX_UzS.txt', 'Diareya', 'uploads/bemor/signals/2023/Dec/14/vTecAUAPeIpq.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/xKgbyrOH3c2t.png', 6, 74, 0),
+(26, 'Raximjonov', 'Qudrat', 'Xazratovich', '189378000', '+998991234567', 'raximjonov@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2023/Dec/14/cZs9LVreYqcr.txt', 'uploads/bemor/signals/2023/Dec/14/ywVbK8lfKM8I.txt', 'uploads/bemor/signals/2023/Dec/14/KcVIe5Pp1eNs.txt', 'uploads/bemor/signals/2023/Dec/14/aBD2nf95VutV.txt', 'uploads/bemor/signals/2023/Dec/14/OuQ4MB22cp4c.txt', 'Gepatit', 'uploads/bemor/signals/2023/Dec/14/UsGUzlIEaL3O.doc', 'Anonim', 'uploads/bemor/rasm/2023/Dec/14/5t_4ybMbrkE7.png', 5, 68, 0),
+(27, 'Maxkamov', 'Bobur', 'Azamat o\'g\'li', '875304000', '+998991234567', 'boburmaxkamov@gmail.com', 'erkak', 0, 0, 'uploads/bemor/signals/2024/Jan/08/bDjYyM_P4ZUO.txt', 'uploads/bemor/signals/2024/Jan/08/yoqfXSIb1NYb.txt', 'uploads/bemor/signals/2024/Jan/08/bl-YGmE1fAH8.txt', 'uploads/bemor/signals/2024/Jan/08/JEgzcuW7wnRC.txt', 'uploads/bemor/signals/2024/Jan/08/45pmFw1bdQSy.txt', 'Oshqozon yarasi', 'uploads/bemor/signals/2024/Jan/08/ikCS38EwyrzJ.doc', 'Anonim', 'uploads/bemor/rasm/2024/Jan/08/RKeC146vCuze.jpg', 9, 123, 0),
+(28, 'Maxmudov', 'Jamshid', 'Arzimurod o\'g\'li', '1998-06-10', '+998991234567', 'maxmudovj@gmail.com', 'erkak', 1705051019, 0, 'uploads/bemor/rasm/2024/Jan/12/KizRVvIvaY7i.txt', 'uploads/bemor/rasm/2024/Jan/12/94JLi1LjN_jd.txt', 'uploads/bemor/rasm/2024/Jan/12/ya4vBAfbMBfw.txt', 'uploads/bemor/rasm/2024/Jan/12/eIKbQawZmdAj.txt', 'uploads/bemor/rasm/2024/Jan/12/L3HtHOlKO4ry.txt', 'Dispepsiya', 'uploads/bemor/rasm/2024/Jan/12/xMs23WHZIUhl.doc', 'Anonim', NULL, 1, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -1091,7 +1118,8 @@ INSERT INTO `viloyat` (`viloyat_id`, `viloyat_nomi`, `status`) VALUES
 (11, 'Toshkent viloyati', 1),
 (12, 'Farg\'ona viloyati', 1),
 (13, 'Xorazm viloyati', 1),
-(14, 'Toshkent shahri', 1);
+(14, 'Toshkent shahri', 1),
+(15, 'Boshqa', 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -1102,7 +1130,8 @@ INSERT INTO `viloyat` (`viloyat_id`, `viloyat_nomi`, `status`) VALUES
 --
 ALTER TABLE `bemor`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `user_unique_email` (`email`);
+  ADD UNIQUE KEY `user_unique_email` (`email`),
+  ADD UNIQUE KEY `status` (`id`);
 
 --
 -- Индексы таблицы `viloyat`
@@ -1118,13 +1147,13 @@ ALTER TABLE `viloyat`
 -- AUTO_INCREMENT для таблицы `bemor`
 --
 ALTER TABLE `bemor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT для таблицы `viloyat`
 --
 ALTER TABLE `viloyat`
-  MODIFY `viloyat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `viloyat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

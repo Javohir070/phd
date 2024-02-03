@@ -56,6 +56,13 @@ class BemorController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    public function actionChart($id)
+    {
+        $model = Bemor::findOne($id);
+        return $this->render('chart',[
+            'model' => $model
+        ]);
+    }
 
 
     /**

@@ -2,5 +2,23 @@
   "dependencies": {
     "php": "^1.0.2",
     "php-server": "^1.0.0"
-  }
+  },
+  "name": "phd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Javohir070/phd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Javohir070/phd/issues"
+  },
+  "homepage": "https://github.com/Javohir070/phd#readme",
+  "description": ""
 }

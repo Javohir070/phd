@@ -55,26 +55,28 @@ $(window).on("load", function(){
         },
         title: {
             display: true,
-            text: 'Chart.js Bar Chart'
+            text: 'Oʻzbekiston viloyatlari '
         }
     };
 
     // Chart Data
     var chartData = {
-        labels: ["January", "February", "March", "April", "May"],
+        labels: ["Qoraqalpog","Andijon", "Jizzax", "Buxoro", "Qashqadaryo", "Fargona", "Navoiy", "Sirdaryo", "Surxondaryo", "Namangan"],
         datasets: [{
-            label: "My First dataset",
-            data: [65, 59, 80, 81, 56],
+            label: "Odamlar soni",
+            data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56, 10, 54],
             backgroundColor: "#28D094",
             hoverBackgroundColor: "rgba(22,211,154,.9)",
             borderColor: "transparent"
-        }, {
-            label: "My Second dataset",
-            data: [28, 48, 40, 19, 86],
-            backgroundColor: "#F98E76",
-            hoverBackgroundColor: "rgba(249,142,118,.9)",
-            borderColor: "transparent"
-        }]
+        }
+        //  {
+        //     label: "My Second dataset",
+        //     data: [28, 48, 40, 19, 86],
+        //     backgroundColor: "#F98E76",
+        //     hoverBackgroundColor: "rgba(249,142,118,.9)",
+        //     borderColor: "transparent"
+        // }
+    ]
     };
 
     var config = {
@@ -89,3 +91,5 @@ $(window).on("load", function(){
     // Create the chart
     var lineChart = new Chart(ctx, config);
 });
+
+
