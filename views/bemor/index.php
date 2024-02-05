@@ -5,6 +5,7 @@ use yii\grid\GridView;
 use yii\helpers\Url;
 use app\models\Bemor;
 use yii\widgets\DetailView;
+use yii\bootstrap\Modal;
 use app\models\Tavsiya;
 $abs= app\models\Bemor::find()->all();
 $jamoa = \app\models\Bemor::find()->all(); 
@@ -13,6 +14,37 @@ $erk = \app\models\Bemor::find()->where(['jinsi'=>'erkak'])->all();
 $erk_soni=count($erk);
 $ayol = \app\models\Bemor::find()->where(['jinsi'=>'ayol'])->all();
 $ayol_soni=count($ayol);
+// viloyatlar
+$qoraqal = \app\models\Bemor::find()->where(['viloyat_id'=>'1'])->all();
+$qoraqal_soni=count($qoraqal);
+$andijon = \app\models\Bemor::find()->where(['viloyat_id'=>'2'])->all();
+$andijon_soni=count($andijon);
+$buxoro = \app\models\Bemor::find()->where(['viloyat_id'=>'3'])->all();
+$buxoro_soni=count($buxoro);
+$jizzax = \app\models\Bemor::find()->where(['viloyat_id'=>'4'])->all();
+$jizzax_soni=count($jizzax);
+$qashqadaryo = \app\models\Bemor::find()->where(['viloyat_id'=>'5'])->all();
+$qashqadaryo_soni=count($qashqadaryo);
+$navoiy = \app\models\Bemor::find()->where(['viloyat_id'=>'6'])->all();
+$navoiy_soni=count($navoiy);
+$namangan = \app\models\Bemor::find()->where(['viloyat_id'=>'7'])->all();
+$namangan_soni=count($namangan);
+$samarqand = \app\models\Bemor::find()->where(['viloyat_id'=>'8'])->all();
+$samarqand_soni=count($samarqand);
+$surxon = \app\models\Bemor::find()->where(['viloyat_id'=>'9'])->all();
+$surxon_soni=count($surxon);
+$sirdaryo = \app\models\Bemor::find()->where(['viloyat_id'=>'10'])->all();
+$sirdaryo_soni=count($sirdaryo);
+$toshkent = \app\models\Bemor::find()->where(['viloyat_id'=>'11'])->all();
+$toshkent_soni=count($toshkent);
+$fargona = \app\models\Bemor::find()->where(['viloyat_id'=>'12'])->all();
+$fargona_soni=count($fargona);
+$xaoazm = \app\models\Bemor::find()->where(['viloyat_id'=>'13'])->all();
+$xaoazm_soni=count($xaoazm);
+$tosh_shahri = \app\models\Bemor::find()->where(['viloyat_id'=>'14'])->all();
+$tosh_shahri_soni=count($tosh_shahri);
+$viloyat = array();
+array_push($viloyat,$qoraqal_soni,$andijon_soni,$buxoro_soni,$jizzax_soni,$qashqadaryo_soni,$navoiy_soni,$namangan_soni,$samarqand_soni,$surxon_soni, $sirdaryo_soni, $toshkent_soni,$fargona_soni, $xaoazm_soni,$tosh_shahri_soni);
 
 
 /* @var $this yii\web\View */
@@ -32,73 +64,52 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 </div>
 <br>
-
 <style>
     .table td,
     .table th {
         padding: .75rem 1rem !important;
     }
+    .solar--chart-bold {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M20 13.75a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75v6.75H14V4.25c0-.728-.002-1.2-.048-1.546c-.044-.325-.115-.427-.172-.484c-.057-.057-.159-.128-.484-.172C12.949 2.002 12.478 2 11.75 2c-.728 0-1.2.002-1.546.048c-.325.044-.427.115-.484.172c-.057.057-.128.159-.172.484c-.046.347-.048.818-.048 1.546V20.5H8V8.75A.75.75 0 0 0 7.25 8h-3a.75.75 0 0 0-.75.75V20.5H1.75a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5H20z'/%3E%3C/svg%3E");
+        background-color: currentColor;
+        -webkit-mask-image: var(--svg);
+        mask-image: var(--svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+    .signal-botton{
+        display: flex;
+        /* border: 2px solid; */
+        justify-content: center;
+        align-items: center;
+        padding: 6px 8px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #ffff;
+        border-radius:4px;
+        background-color: #28d094 !important;
+        margin-top: 10px;
+    }
+    .signal-botton:hover{
+        display: flex;
+        /* border: 2px solid; */
+        justify-content: center;
+        align-items: center;
+        padding: 6px 8px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #ffff;
+        border-radius:4px;
+        background-color: black !important;
+        transition: 1s all;
+    }
 </style>
-<!-- <div class="user1-index">  -->
-<!-- <div class="content-body"> -->
-
-    <!-- <div class="users-list-table"> -->
-        <!-- <div class="card"> -->
-            <!-- <div class="card-content"> -->
-                <!-- <div class="card-body">
-                    <div class="table-responsive">
-                        <?= GridView::widget([
-                            'dataProvider' => $dataProvider,
-                            'filterModel' => $searchModel,
-                            'columns' => [
-                                ['class' => 'yii\grid\SerialColumn'],
-
-                                'id',
-                                [
-                                    'attribute' => 'avatar',
-                                    'format' => 'html',
-                                    'label' => 'Rasm',
-                                    'value' => function ($data) {
-                                        return Html::img('/' . $data['avatar'],
-                                            ['width' => '50px']);
-                                    },
-                                ],
-
-                                'last_name',
-                                'first_name',
-                                'middle_name',
-                                'birth_day',
-                                'telefon',
-                                'email:email',
-                                'jinsi',
-                                'created_at',
-                                'updated_at',
-                                'olingan_signal',
-                                'signal_1',
-                                'signal_2',
-                                'signal_3',
-                                'signal_4',
-                                'tashxis',
-                                'tashxis_file',
-                                'manzili',
-                                ['class' => 'yii\grid\ActionColumn'],
-                            ],
-                        ]); ?>
-                    </div>
-                </div> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-
-
-<!-- </div> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="content-body">
-    
-<a href="#" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8"
-                   data-toggle="modal" data-target="#ms-account-modal">
-                    <i class="zmdi zmdi-account"></i>hdas
-                </a>
     <div class="row">
         <div class="col-xl-3 col-lg-6 col-12">
             <div class="card pull-up">
@@ -106,8 +117,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="card-body">
                         <div class="media d-flex">
                             <div class="media-body text-left">
-                                <h3 class="info" style="font-family: 'LineAwesome';"><?php echo $jamoasoni;?></h3>
-                                <h6>Ro'yxatdan o'tishganlar soni</h6>
+                                <h3 class="info" style="font-family: 'LineAwesome';"><?php echo $jamoasoni+ $qash_soni ;?></h3>
+                                <h6>Ro'yxatdan o'tishganlar soni  </h6>
                             </div>
                             <div>
                                 <i class="icon-basket-loaded info font-large-2 float-right"></i>
@@ -260,27 +271,44 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?=$r->tashxis?></td>
                                         <td><?=$r->created_at?></td>
                                         <td><?=$r->updated_at?></td>
-                                        <td><?=$r->olingan_signal?></td>
-                                        <td><?=$r->signal_1?></td>
-                                        <td><?=$r->signal_2?></td>
-                                        <td><?=$r->signal_3?></td>
-                                        <td><?=$r->signal_4?> <button type="button" class="btn btn-outline-primary block btn-lg" data-toggle="modal" data-backdrop="false" data-target="#backdrop">
-										Launch Modal
-									</button></td>
+                                        <td><?=$r->olingan_signal?>
+                                            <a class="signal-botton" href="<?=Url::to(['/bemor/chart','id'=>$r->id])?>" >
+                                                Signalni girafikgi korish
+                                            </a>
+                                        </td>
+                                        <td><?=$r->signal_1?>
+                                            <a class="signal-botton" href="<?=Url::to(['/bemor/signal','id'=>$r->id, 'name'=>$r->signal_1])?>" >
+                                                Signalni girafikgi korish
+                                            </a> 
+                                        </td>
+                                        <td><?=$r->signal_2?>
+                                            <a class="signal-botton" href="<?=Url::to(['/bemor/signal','id'=>$r->id, 'name'=>$r->signal_2])?>" >
+                                                Signalni girafikgi korish
+                                            </a> 
+                                       </td>
+                                        <td><?=$r->signal_3?>
+                                            <a class="signal-botton" href="<?=Url::to(['/bemor/signal','id'=>$r->id, 'name'=>$r->signal_3])?>" >
+                                                Signalni girafikgi korish
+                                            </a> 
+                                       </td>
+                                        <td><?=$r->signal_4?> 
+                                            <a class="signal-botton" href="<?=Url::to(['/bemor/signal','id'=>$r->id, 'name'=>$r->signal_4])?>" >
+                                                Signalni girafikgi korish
+                                            </a> 
+                                        </td>
                                         <td><?=$r->tashxis_file?></td>
                                         <td><?=!empty($r->region)?$r->region->viloyat_nomi:''?></td>
                                         <td><?=!empty($r->district)?$r->district->tuman_nomi:''?></td>
                                         <td><?=$r->manzili?></td>
-                                        <td><a href="<?=Url::to(['/bemor/chart','id'=>$r->id])?>" aria-label="View" data-pjax="0"><span
-                                                    class="glyphicon glyphicon-eye-open"><i class="ft-eye text-success"></i></span></a>
+                                        <td><a href="<?=Url::to(['/bemor/chart','id'=>$r->id])?>" aria-label="View" data-pjax="0"><span class="solar--chart-bold"></span></a>
                                                     
                                                     <a href="/bemor/view/<?=$r->id?>" title="View" aria-label="View" data-pjax="0"><span
-                                                    class="glyphicon glyphicon-eye-open"><i class="ft-eye text-success"></i></span></a>
+                                                    class="glyphicon glyphicon-eye-open"></span></a>
                                                      <a href="/bemor/update/<?=$r->id?>" title="Update" aria-label="Update"
-                                                data-pjax="0"><span class="glyphicon glyphicon-pencil"><i class="ft-edit text-success"></i></span></a> <a
+                                                data-pjax="0"><span class="glyphicon glyphicon-pencil"></span></a> <a
                                                 href="/bemor/delete/<?=$r->id?>" title="Delete" aria-label="Delete" data-pjax="0"
                                                 data-confirm="Are you sure you want to delete this item?"
-                                                data-method="post"><span class="glyphicon glyphicon-trash"><i class="ft-trash-2 ml-1 text-warning"></i></span></a>
+                                                data-method="post"><span class="glyphicon glyphicon-trash"></span></a>
                                         </td>
                                     </tr>
                                     <?}?>
@@ -315,45 +343,6 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="form-group">
-									
-									<button type="button" class="btn btn-outline-primary block btn-lg" data-toggle="modal" data-backdrop="false" data-target="#backdrop">
-										Launch Modal
-									</button>
-
-									<!-- Modal -->
-									<div class="modal fade text-left" id="backdrop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" style="display: none;" aria-hidden="true">
-										<div class="modal-dialog" role="document">
-											<div class="modal-content">
-												<div class="modal-header">
-													<h4 class="modal-title" id="myModalLabel4">Basic Modal</h4>
-													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-														<span aria-hidden="true">×</span>
-													</button>
-												</div>
-												<div class="modal-body">
-													<h5>Check First Paragraph</h5>
-													<p>Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot
-														cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake
-														liquorice. Apple pie sugar plum powder donut soufflé.</p>
-													<p>Sweet roll biscuit donut cake gingerbread. Chocolate cupcake chocolate bar ice cream. Danish candy
-														cake.</p>
-													<hr>
-													<h5>Some More Text</h5>
-													<p>Cupcake sugar plum dessert tart powder chocolate fruitcake jelly. Tootsie roll bonbon toffee danish.
-														Biscuit sweet cake gummies danish. Tootsie roll cotton candy tiramisu lollipop candy cookie biscuit pie.</p>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn grey btn-outline-secondary" data-dismiss="modal">Close</button>
-													<button type="button" class="btn btn-outline-primary">Save changes</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
 </div>
 <style type="text/css">
     .pagination li a {
@@ -382,3 +371,4 @@ $this->params['breadcrumbs'][] = $this->title;
     getUniqueValuesFromColumn();
     
 </script>
+

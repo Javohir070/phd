@@ -9,6 +9,8 @@
 
 // Column chart
 // ------------------------------
+
+
 $(window).on("load", function(){
 
     //Get the context of the Chart canvas element we want to select
@@ -61,7 +63,7 @@ $(window).on("load", function(){
 
     // Chart Data
     var chartData = {
-        labels: ["Qoraqalpog","Andijon", "Jizzax", "Buxoro", "Qashqadaryo", "Fargona", "Navoiy", "Sirdaryo", "Surxondaryo", "Namangan"],
+        labels: ["Qoraqalpog","Andijon","Buxoro", "Jizzax",  "Qashqadaryo", "Navoiy", "Namangan", "Surxondaryo","Sirdaryo", "Fargona"    ],
         datasets: [{
             label: "Odamlar soni",
             data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56, 10, 54],

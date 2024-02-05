@@ -63,7 +63,14 @@ class BemorController extends Controller
             'model' => $model
         ]);
     }
-
+    public function actionSignal($id, $name)
+    {
+        $model = Bemor::findOne($id);
+        $mod = $name;
+        return $this->render('signal',[
+            'model' => $model,'mod'=>$mod
+        ]);
+    }
 
     /**
      * Displays a single Bemor model.

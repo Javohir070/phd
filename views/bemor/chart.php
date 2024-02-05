@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="header">
     <h1 style="float: left;"><?= Html::encode($this->title) ?></h1>
     <p style="margin-left: 70%;">
-        <?= Html::a('Bemor qo\'shish', ['create'], ['class' => 'btn btn-info btn-min-width mr-1 mb-1 btn-block']) ?>
+        <a href="<?=Url::to('/bemor');?>" class='btn btn-info btn-min-width mr-1 mb-1 btn-block'>Orqaga qaytish</a>
     </p>
 </div>
 <br>
@@ -362,6 +362,9 @@ xhr.onload = function(e) {
             datasets: [{ 
             data: y_val,
             borderColor: "red",
+            borderWidth:1,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             fill: false
             }],
             
@@ -411,6 +414,9 @@ sig1.onload = function(e) {
             datasets: [{ 
             data: y_val1,
             borderColor: "red",
+            borderWidth:1,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             fill: false
             }],
             
@@ -461,6 +467,9 @@ sig2.onload = function(e) {
             datasets: [{ 
             data: y_val1,
             borderColor: "red",
+            borderWidth:1,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             fill: false
             }],
             
@@ -510,6 +519,9 @@ sig3.onload = function(e) {
             datasets: [{ 
             data: y_val1,
             borderColor: "red",
+            borderWidth:1,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             fill: false
             }],
             
@@ -559,6 +571,9 @@ sig4.onload = function(e) {
             datasets: [{ 
             data: y_val1,
             borderColor: "red",
+            borderWidth:0.8,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             fill: false
             }],
             
