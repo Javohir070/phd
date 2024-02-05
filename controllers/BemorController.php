@@ -71,7 +71,11 @@ class BemorController extends Controller
             'model' => $model,'mod'=>$mod
         ]);
     }
-
+    public function actionViloyat()
+    {
+       
+        return $this->render('viloyat');
+    }
     /**
      * Displays a single Bemor model.
      * @param integer $id

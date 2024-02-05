@@ -22,6 +22,7 @@ class BackendAsset extends AssetBundle
     public $css = [
         'css/site.css',
         '/web/backend/app-assets/vendors/css/vendors.min.css',
+        '/web/backend/css/style.css',
         '/web/backend/app-assets/vendors/css/weather-icons/climacons.min.css',
         '/web/backend/app-assets/fonts/meteocons/style.min.css',
         '/web/backend/app-assets/vendors/css/charts/morris.css',
@@ -36,7 +37,6 @@ class BackendAsset extends AssetBundle
         '/web/backend/css/palette-gradient.min.css',
         //'/web/backend/css/cryptocoins.css',
         '/web/backend/css/apexcharts.css',
-        '/web/backend/css/style.css',
         '/web/backend/app-assets/css/pages/dashboard-ecommerce.min.css',
     ];
     public $js = [

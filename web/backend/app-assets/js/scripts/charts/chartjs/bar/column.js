@@ -63,10 +63,10 @@ $(window).on("load", function(){
 
     // Chart Data
     var chartData = {
-        labels: ["Qoraqalpog","Andijon","Buxoro", "Jizzax",  "Qashqadaryo", "Navoiy", "Namangan", "Surxondaryo","Sirdaryo", "Fargona"    ],
+        labels: ["Qoraqalpog","Andijon","Buxoro", "Jizzax",  "Qashqadaryo", "Navoiy", "Namangan", "Surxondaryo","Sirdaryo", "Fargona", "samr", "tosh", "toshshari"   ],
         datasets: [{
             label: "Odamlar soni",
-            data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56, 10, 54],
+            data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56, 14, 54, 25],
             backgroundColor: "#28D094",
             hoverBackgroundColor: "rgba(22,211,154,.9)",
             borderColor: "transparent"

@@ -302,14 +302,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?=$r->manzili?></td>
                                         <td><a href="<?=Url::to(['/bemor/chart','id'=>$r->id])?>" aria-label="View" data-pjax="0"><span class="solar--chart-bold"></span></a>
                                                     
-                                                    <a href="/bemor/view/<?=$r->id?>" title="View" aria-label="View" data-pjax="0"><span
-                                                    class="glyphicon glyphicon-eye-open"></span></a>
+                                        <a href="/bemor/view/<?=$r->id?>" title="View" aria-label="View" data-pjax="0"><span
+                                                    class="glyphicon glyphicon-eye-open"><i class="ft-eye text-success"></i></span></a>
                                                      <a href="/bemor/update/<?=$r->id?>" title="Update" aria-label="Update"
-                                                data-pjax="0"><span class="glyphicon glyphicon-pencil"></span></a> <a
+                                                data-pjax="0"><span class="glyphicon glyphicon-pencil"><i class="ft-edit text-success"></i></span></a> <a
                                                 href="/bemor/delete/<?=$r->id?>" title="Delete" aria-label="Delete" data-pjax="0"
                                                 data-confirm="Are you sure you want to delete this item?"
-                                                data-method="post"><span class="glyphicon glyphicon-trash"></span></a>
-                                        </td>
+                                                data-method="post"><span class="glyphicon glyphicon-trash"><i class="ft-trash-2 ml-1 text-warning"></i></span></a>
+                                       </td>
                                     </tr>
                                     <?}?>
                                 </tbody>
