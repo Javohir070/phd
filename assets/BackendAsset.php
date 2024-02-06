@@ -61,8 +61,9 @@ class BackendAsset extends AssetBundle
         // '/web/backend/app-assets/js/scripts/charts/chartjs/line/line-multi-axis.min.js',
         // '/web/backend/app-assets/js/scripts/charts/chartjs/line/line-skip-points.min.js',
         // '/web/backend/app-assets/js/scripts/charts/chartjs/line/line-stacked-area.min.js',
-        '/web/backend/app-assets/js/scripts/charts/chartjs/bar/column.js',
+        // '/web/backend/app-assets/js/scripts/charts/chartjs/bar/column.js',
         '/web/backend/app-assets/js/modal.js',
+        '/web/backend/app-assets/js/scripts/charts/apexcharts/charts-apexcharts.min.js',
         // '/web/backend/app-assets/js/scripts/charts/chartjs/bar/column-stacked.min.js',
     ];
     public $depends = [

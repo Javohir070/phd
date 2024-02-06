@@ -41,15 +41,22 @@ array_push($viloyat,$qoraqal_soni,$andijon_soni,$buxoro_soni,$jizzax_soni,$qashq
 /* @var $searchModel app\models\search\BemorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+// PHP o'zgaruvchisi
+$phpVariable = $viloyat;
+
+// PHP o'zgaruvchisini JavaScript ga o'tkazish
+echo "<script>var jsVariable = '$phpVariable';</script>";
+
 $this->title = 'Bemors';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
-<div class="row">
+<!-- <script>
+    alert(jsVariable);
+</script> -->
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Oʻzbekiston viloyatlari kesimda</h4>
+                    <h4 class="card-title">Oʻzbekiston viloyatlari kesimda </h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                     <div class="heading-elements">
                         <ul class="list-inline mb-0">
@@ -62,12 +69,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="card-content collapse show">
                     <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                        <canvas id="column-chart" height="400" width="1545" style="display: block; width: 1545px; height: 400px;" class="chartjs-render-monitor"></canvas>
+                        <canvas id="column-chart_viloyat" height="400" width="1545" style="display: block; width: 1545px; height: 400px;" class="chartjs-render-monitor"></canvas>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    
 
 <script>
     /*=========================================================================================
@@ -83,88 +90,95 @@ $this->params['breadcrumbs'][] = $this->title;
 // ------------------------------
 
 
-$(window).on("load", function(){
+window.addEventListener("load", (event) =>{
+         let arr_viloat = jsVariable;
+         console.log(arr_viloat);
+         for (let i = 0; i < arr_viloat.length; i++) {
+            const element = arr_viloat[i];
+            console.log(element);
+            
+         }
+        //Get the context of the Chart canvas element we want to select
+        var ctx = $("#column-chart_viloyat");
 
-//Get the context of the Chart canvas element we want to select
-var ctx = $("#column-chart_viloyat");
-
-// Chart Options
-var chartOptions = {
-    // Elements options apply to all of the options unless overridden in a dataset
-    // In this case, we are setting the border of each bar to be 2px wide and green
-    elements: {
-        rectangle: {
-            borderWidth: 2,
-            borderColor: 'rgb(0, 255, 0)',
-            borderSkipped: 'bottom'
-        }
-    },
-    responsive: true,
-    maintainAspectRatio: false,
-    responsiveAnimationDuration:500,
-    legend: {
-        position: 'top',
-    },
-    scales: {
-        xAxes: [{
-            display: true,
-            gridLines: {
-                color: "#f3f3f3",
-                drawTicks: false,
+        // Chart Options
+        var chartOptions = {
+            // Elements options apply to all of the options unless overridden in a dataset
+            // In this case, we are setting the border of each bar to be 2px wide and green
+            elements: {
+                rectangle: {
+                    borderWidth: 2,
+                    borderColor: 'rgb(0, 255, 0)',
+                    borderSkipped: 'bottom'
+                }
             },
-            scaleLabel: {
-                display: true,
-            }
-        }],
-        yAxes: [{
-            display: true,
-            gridLines: {
-                color: "#f3f3f3",
-                drawTicks: false,
+            responsive: true,
+            maintainAspectRatio: false,
+            responsiveAnimationDuration:500,
+            legend: {
+                position: 'top',
             },
-            scaleLabel: {
+            scales: {
+                xAxes: [{
+                    display: true,
+                    gridLines: {
+                        color: "#f3f3f3",
+                        drawTicks: false,
+                    },
+                    scaleLabel: {
+                        display: true,
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    gridLines: {
+                        color: "#f3f3f3",
+                        drawTicks: false,
+                    },
+                    scaleLabel: {
+                        display: true,
+                    }
+                }]
+            },
+            title: {
                 display: true,
+                text: 'Oʻzbekiston viloyatlari '
             }
-        }]
-    },
-    title: {
-        display: true,
-        text: 'Oʻzbekiston viloyatlari '
-    }
-};
+        };
 
-// Chart Data
-var chartData = {
-    labels: ["Qoraqalpog","Andijon","Buxoro", "Jizzax",  "Qashqadaryo", "Navoiy", "Namangan", "Surxondaryo","Sirdaryo", "Fargona"    ],
-    datasets: [{
-        label: "Odamlar soni",
-        data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56, 10, 54],
-        backgroundColor: "#28D094",
-        hoverBackgroundColor: "rgba(22,211,154,.9)",
-        borderColor: "transparent"
-    }
-    //  {
-    //     label: "My Second dataset",
-    //     data: [28, 48, 40, 19, 86],
-    //     backgroundColor: "#F98E76",
-    //     hoverBackgroundColor: "rgba(249,142,118,.9)",
-    //     borderColor: "transparent"
-    // }
-]
-};
+        // Chart Data
+        var chartData = {
+            labels: ["Qoraqalpog","Andijon","Buxoro", "Jizzax",  "Qashqadaryo", "Navoiy", "Namangan", "Surxondaryo","Sirdaryo", "Fargona"    ],
+            datasets: [{
+                label: "Odamlar soni",
+                data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56, 10, 54],
+                // date: arr_viloat;
+                backgroundColor: "#28D094",
+                hoverBackgroundColor: "rgba(22,211,154,.9)",
+                borderColor: "transparent"
+            }
+            //  {
+            //     label: "My Second dataset",
+            //     data: [28, 48, 40, 19, 86],
+            //     backgroundColor: "#F98E76",
+            //     hoverBackgroundColor: "rgba(249,142,118,.9)",
+            //     borderColor: "transparent"
+            // }
+        ]
+        };
 
-var config = {
-    type: 'bar',
+        var config = {
+            type: 'bar',
 
-    // Chart Options
-    options : chartOptions,
+            // Chart Options
+            options : chartOptions,
 
-    data : chartData
-};
+            data : chartData
+        };
 
-// Create the chart
-var lineChart = new Chart(ctx, config);
-});
+        // Create the chart
+        var lineChart = new Chart(ctx, config);
+        });
 
 
 

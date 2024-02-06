@@ -94,10 +94,11 @@ class Bemor extends \yii\db\ActiveRecord
             //if (!is_integer($this->created_date)) $this->created_date = strtotime($this->created_date);
             //else 
                 $this->created_at = time();
+                $this->generateAuthKey();
             //$this->viloyat_id = Yii::$app->user->identity->hudud_id;
         }else{
             //$this->created_date = time();
-            $this->created_at = strtotime($this->created_at);
+                $this->updated_at = time();
         }
 
         // ...custom code here...

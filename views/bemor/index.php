@@ -44,7 +44,7 @@ $xaoazm_soni=count($xaoazm);
 $tosh_shahri = \app\models\Bemor::find()->where(['viloyat_id'=>'14'])->all();
 $tosh_shahri_soni=count($tosh_shahri);
 $viloyat = array();
-array_push($viloyat,$qoraqal_soni,$andijon_soni,$buxoro_soni,$jizzax_soni,$qashqadaryo_soni,$navoiy_soni,$namangan_soni,$samarqand_soni,$surxon_soni, $sirdaryo_soni, $toshkent_soni,$fargona_soni, $xaoazm_soni,$tosh_shahri_soni);
+array_push($viloyat, $qoraqal_soni,$andijon_soni,$buxoro_soni,$jizzax_soni,$qashqadaryo_soni,$navoiy_soni,$namangan_soni,$samarqand_soni,$surxon_soni, $sirdaryo_soni, $toshkent_soni,$fargona_soni, $xaoazm_soni,$tosh_shahri_soni);
 
 
 /* @var $this yii\web\View */
@@ -178,7 +178,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="media d-flex">
                             <div class="media-body text-left">
                                 <h3 class="danger" style="font-family: 'LineAwesome';">99.89 %</h3>
-                                <h6>Bolalar</h6>
+                                <h6>Bolalar </h6>
                             </div>
                             <div>
                                 <i class="icon-heart danger font-large-2 float-right"></i>
@@ -321,27 +321,8 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Oʻzbekiston viloyatlari kesimda</h4>
-                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                    <div class="heading-elements">
-                        <ul class="list-inline mb-0">
-                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
-                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
-                            <li><a data-action="close"><i class="ft-x"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-content collapse show">
-                    <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                        <canvas id="column-chart" height="400" width="1545" style="display: block; width: 1545px; height: 400px;" class="chartjs-render-monitor"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?= $this->render('@webroot/views/bemor/viloyat'); ?>
+        <?= $this->render('@webroot/views/bemor/turlar'); ?>
     </div>
 </div>
 <style type="text/css">
