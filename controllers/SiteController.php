@@ -12,6 +12,7 @@ use app\models\Fikrlar;
 use app\models\Kitoblar;
 use yii\data\ActiveDataProvider;
 use app\models\LoginForm;
+use app\models\SignupForm;
 use app\models\ContactForm;
 use app\models\Sahifalar;
 use app\models\Korzinka;
@@ -78,15 +79,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        //$this->layout="frontend";
+        $this->layout="frontend";
 
     	// if (!Yii::$app->user->isGuest) {
-     //    	$role=Yii::$app->user->identity->role;
-     //    	if($role=="admin")
-     //        return $this->redirect(['admin/index']);
-     //    	if($role=="user")
-     //    		return $this->redirect(['profile/index']);
-     //    }
+        // 	$role=Yii::$app->user->identity->role;
+        // 	if($role=="admin")
+        //     return $this->redirect(['profile/index']);
+        // 	if($role=="user")
+        // 		return $this->redirect(['profile/index']);
+        // }
         
         return $this->render('index');
     }
@@ -102,10 +103,11 @@ class SiteController extends Controller
        //exit;
         //echo "salom";exit;
         $this->layout="login";
-        if (!Yii::$app->user->isGuest) {
+        // $this->layout="frontend";
+        if (!Yii::$app->user->isGuest) {    
         	$user=Yii::$app->user->identity->role;
         	if($role=="admin")
-            return $this->redirect(['admin/index']);
+            return $this->redirect(['profile/index']);
         	if($role=="user")
         		return $this->redirect(['profile/index']);
         }
@@ -115,7 +117,7 @@ class SiteController extends Controller
             
             if ($model->login()) {
                 
-                return $this->redirect(['admin/index']);
+                return $this->redirect(['site/index']);
              }
              else{
                 echo "login bomadi";exit;  
@@ -137,6 +139,21 @@ class SiteController extends Controller
      *
      * @return Response
      */
+
+     public function actionSignup()
+     {
+         $model = new SignupForm();
+ 
+         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
+             // Foydalanuvchi muvaffaqiyatli ruyxatdan o'tgan bo'lsa
+             return $this->goHome();
+         }
+ 
+         return $this->render('signup', [
+             'model' => $model,
+         ]);
+     }
+
     public function actionLogout()
     {
         Yii::$app->user->logout();

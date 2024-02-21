@@ -45,7 +45,7 @@ $user = Yii::$app->user->identity;
         </div>
 
       </div>
-
+<!-- 
      <div class="card animated fadeInUp animation-delay-12">
         
         <div class="ms-hero-bg-primary ms-hero-img-mountain">
@@ -92,4 +92,4 @@ $user = Yii::$app->user->identity;
           </div>
         </div>
 
-      </div>
+      </div> -->

@@ -52,7 +52,8 @@ class Bemor extends \yii\db\ActiveRecord
             [['olingan_signal', 'tashxis', 'manzili'], 'string', 'max' => 1024],
             [['signal_1', 'signal_2', 'signal_3', 'signal_4'], 'string', 'max' => 2560],
             [['tashxis_file', 'avatar'], 'string', 'max' => 2048],
-            [['email'], 'unique'],
+            // [['email'], 'unique'],
+            ['email', 'unique', 'targetClass' => 'app\models\Bemor', 'message' => 'Bu email bazda bor'],
         ];
     }
 
@@ -76,10 +77,10 @@ class Bemor extends \yii\db\ActiveRecord
             'created_at' => 'Yaratilgan sana',
             'updated_at' => 'O\'zgartirilgan sana',
             'olingan_signal' => 'Olingan Signal',
-            'signal_1' => 'Signal 1',
-            'signal_2' => 'Signal 2',
-            'signal_3' => 'Signal 3',
-            'signal_4' => 'Signal 4',
+            'signal_1' => "Yo'g'on ichak",
+            'signal_2' => 'Oshqozon',
+            'signal_3' => 'Ingichka ichak',
+            'signal_4' => "O'n ikki barmoqli ichak",
             'tashxis' => 'Tashxis',
             'tashxis_file' => 'Tashxis Fayli',
             'manzili' => 'Manzili',
@@ -94,7 +95,7 @@ class Bemor extends \yii\db\ActiveRecord
             //if (!is_integer($this->created_date)) $this->created_date = strtotime($this->created_date);
             //else 
                 $this->created_at = time();
-                $this->generateAuthKey();
+                // $this->generateAuthKey();
             //$this->viloyat_id = Yii::$app->user->identity->hudud_id;
         }else{
             //$this->created_date = time();
@@ -104,19 +105,28 @@ class Bemor extends \yii\db\ActiveRecord
         // ...custom code here...
         return parent::beforeSave($insert);
     }
-    public function afterFind()
+
+    public static function getByCategory($startAge, $endAge)
     {
-        if (is_integer($this->created_at)) {
-            $this->created_at = date('d-m-Y',$this->created_at);
-        }
-        if (is_integer($this->birth_day)) {
-            $this->birth_day = date('d-m-Y',$this->birth_day);
-        }
-        if (is_integer($this->updated_at)) {
-            $this->updated_at = date('d-m-Y',$this->updated_at);
-        }
-        return parent::afterFind();
+        return self::find()
+            ->where(['between', 'age', $startAge, $endAge])
+            ->all();
     }
+    
+
+    // public function afterFind()
+    // {
+    //     if (is_integer($this->created_at)) {
+    //         $this->created_at = date('d-m-Y',$this->created_at);
+    //     }
+    //     // if (is_integer($this->birth_day)) {
+    //     //     $this->birth_day = date('d-m-Y',$this->birth_day);
+    //     // }
+    //     if (is_integer($this->updated_at)) {
+    //         $this->updated_at = date('d-m-Y',$this->updated_at);
+    //     }
+    //     return parent::afterFind();
+    // }
     
     // public function uploadrasm()
     // {

@@ -6,7 +6,6 @@ use yii\helpers\Url;
 use app\models\Bemor;
 use yii\widgets\DetailView;
 use app\models\Tavsiya;
-
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\search\BemorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -212,7 +211,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-12">
             <div class="card" style="padding-bottom:40px">
                 <div class="card-header">
-                    <h4 class="card-title">Simple Line Chart</h4>
+                    <h4 class="card-title">Yo'g'on ichak </h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                     <div class="heading-elements">
                         <ul class="list-inline mb-0">
@@ -244,7 +243,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-12">
             <div class="card" style="padding-bottom:40px">
                 <div class="card-header">
-                    <h4 class="card-title">Simple Line Chart</h4>
+                    <h4 class="card-title">Oshqozon</h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                     <div class="heading-elements">
                         <ul class="list-inline mb-0">
@@ -276,7 +275,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-12">
             <div class="card" style="padding-bottom:40px">
                 <div class="card-header">
-                    <h4 class="card-title">Simple Line Chart</h4>
+                    <h4 class="card-title">Ingichka ichak</h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                     <div class="heading-elements">
                         <ul class="list-inline mb-0">
@@ -302,7 +301,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-12">
             <div class="card" style="padding-bottom:40px">
                 <div class="card-header">
-                    <h4 class="card-title">Simple Line Chart</h4>
+                    <h4 class="card-title">O'n ikki barmoqli ichak</h4>
                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                     <div class="heading-elements">
                         <ul class="list-inline mb-0">
@@ -326,7 +325,6 @@ $this->params['breadcrumbs'][] = $this->title;
     // Bazadan kelgan fayl nomi
 // var fileName = "/uploads/bemor/signals/2023/Dec/14/text.txt";
 var fileName = "/<?=$model->olingan_signal?>"
-
 // Faylni o'qish uchun XMLHttpRequest obyekti yaratish
 var xhr = new XMLHttpRequest();
 xhr.open('GET', fileName, true);

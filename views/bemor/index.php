@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\helpers\Url;
@@ -14,39 +13,6 @@ $erk = \app\models\Bemor::find()->where(['jinsi'=>'erkak'])->all();
 $erk_soni=count($erk);
 $ayol = \app\models\Bemor::find()->where(['jinsi'=>'ayol'])->all();
 $ayol_soni=count($ayol);
-// viloyatlar
-$qoraqal = \app\models\Bemor::find()->where(['viloyat_id'=>'1'])->all();
-$qoraqal_soni=count($qoraqal);
-$andijon = \app\models\Bemor::find()->where(['viloyat_id'=>'2'])->all();
-$andijon_soni=count($andijon);
-$buxoro = \app\models\Bemor::find()->where(['viloyat_id'=>'3'])->all();
-$buxoro_soni=count($buxoro);
-$jizzax = \app\models\Bemor::find()->where(['viloyat_id'=>'4'])->all();
-$jizzax_soni=count($jizzax);
-$qashqadaryo = \app\models\Bemor::find()->where(['viloyat_id'=>'5'])->all();
-$qashqadaryo_soni=count($qashqadaryo);
-$navoiy = \app\models\Bemor::find()->where(['viloyat_id'=>'6'])->all();
-$navoiy_soni=count($navoiy);
-$namangan = \app\models\Bemor::find()->where(['viloyat_id'=>'7'])->all();
-$namangan_soni=count($namangan);
-$samarqand = \app\models\Bemor::find()->where(['viloyat_id'=>'8'])->all();
-$samarqand_soni=count($samarqand);
-$surxon = \app\models\Bemor::find()->where(['viloyat_id'=>'9'])->all();
-$surxon_soni=count($surxon);
-$sirdaryo = \app\models\Bemor::find()->where(['viloyat_id'=>'10'])->all();
-$sirdaryo_soni=count($sirdaryo);
-$toshkent = \app\models\Bemor::find()->where(['viloyat_id'=>'11'])->all();
-$toshkent_soni=count($toshkent);
-$fargona = \app\models\Bemor::find()->where(['viloyat_id'=>'12'])->all();
-$fargona_soni=count($fargona);
-$xaoazm = \app\models\Bemor::find()->where(['viloyat_id'=>'13'])->all();
-$xaoazm_soni=count($xaoazm);
-$tosh_shahri = \app\models\Bemor::find()->where(['viloyat_id'=>'14'])->all();
-$tosh_shahri_soni=count($tosh_shahri);
-$viloyat = array();
-array_push($viloyat, $qoraqal_soni,$andijon_soni,$buxoro_soni,$jizzax_soni,$qashqadaryo_soni,$navoiy_soni,$namangan_soni,$samarqand_soni,$surxon_soni, $sirdaryo_soni, $toshkent_soni,$fargona_soni, $xaoazm_soni,$tosh_shahri_soni);
-
-
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\search\BemorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -269,8 +235,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><a href="mailto:s.makhmudjanov@gmail.com"><?=$r->email?></a></td>
                                         <td><?=$r->jinsi?></td>
                                         <td><?=$r->tashxis?></td>
-                                        <td><?=$r->created_at?></td>
-                                        <td><?=$r->updated_at?></td>
+                                        <td><?php echo date("d-m-Y",$r->created_at);?></td>
+                                        <td><?php echo date('d-m-Y',($r->updated_at)?($r->updated_at):($r->created_at));?></td>
                                         <td><?=$r->olingan_signal?>
                                             <a class="signal-botton" href="<?=Url::to(['/bemor/chart','id'=>$r->id])?>" >
                                                 Signalni girafikgi korish

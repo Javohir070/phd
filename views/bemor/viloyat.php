@@ -36,23 +36,14 @@ $tosh_shahri = \app\models\Bemor::find()->where(['viloyat_id'=>'14'])->all();
 $tosh_shahri_soni=count($tosh_shahri);
 $viloyat = array();
 array_push($viloyat,$qoraqal_soni,$andijon_soni,$buxoro_soni,$jizzax_soni,$qashqadaryo_soni,$navoiy_soni,$namangan_soni,$samarqand_soni,$surxon_soni, $sirdaryo_soni, $toshkent_soni,$fargona_soni, $xaoazm_soni,$tosh_shahri_soni);
-
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\search\BemorSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-// PHP o'zgaruvchisi
-$phpVariable = $viloyat;
-
-// PHP o'zgaruvchisini JavaScript ga o'tkazish
-echo "<script>var jsVariable = '$phpVariable';</script>";
-
+// PHP arrayni JavaScript arrayiga o'tkazish
+echo "<script>";
+echo "var jsArray = " . json_encode($viloyat) . ";";
+echo "</script>";
 $this->title = 'Bemors';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<!-- <script>
-    alert(jsVariable);
-</script> -->
+
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
@@ -91,16 +82,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 window.addEventListener("load", (event) =>{
-         let arr_viloat = jsVariable;
-         console.log(arr_viloat);
-         for (let i = 0; i < arr_viloat.length; i++) {
-            const element = arr_viloat[i];
-            console.log(element);
-            
-         }
+    
         //Get the context of the Chart canvas element we want to select
         var ctx = $("#column-chart_viloyat");
-
+        
         // Chart Options
         var chartOptions = {
             // Elements options apply to all of the options unless overridden in a dataset
@@ -148,10 +133,10 @@ window.addEventListener("load", (event) =>{
 
         // Chart Data
         var chartData = {
-            labels: ["Qoraqalpog","Andijon","Buxoro", "Jizzax",  "Qashqadaryo", "Navoiy", "Namangan", "Surxondaryo","Sirdaryo", "Fargona"    ],
+            labels: ["Qoraqalpog","Andijon","Buxoro", "Jizzax",  "Qashqadaryo", "Navoiy", "Namangan","Samarqand", "Surxondaryo","Sirdaryo","Toshkent v", "Fargona", "Xorazm","Toshkent sh"    ],
             datasets: [{
                 label: "Odamlar soni",
-                data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56, 10, 54],
+                data: jsArray,
                 // date: arr_viloat;
                 backgroundColor: "#28D094",
                 hoverBackgroundColor: "rgba(22,211,154,.9)",

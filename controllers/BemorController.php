@@ -30,7 +30,6 @@ class BemorController extends Controller
             ],
         ];
     }
-
     /**
      * Lists all Bemor models.
      * @return mixed
@@ -63,6 +62,9 @@ class BemorController extends Controller
             'model' => $model
         ]);
     }
+    public function actionTurlar(){
+        return $this->render('turlar');
+    }
     public function actionSignal($id, $name)
     {
         $model = Bemor::findOne($id);
@@ -71,9 +73,25 @@ class BemorController extends Controller
             'model' => $model,'mod'=>$mod
         ]);
     }
+    public function actionAge()
+    {
+        return $this->render('age');
+    }
+
+    public function actionGetByCategory($startAge, $endAge)
+    {
+        // Bemor modelini olish
+        $bemorModel = new Bemor();
+
+        // Kategoriya bo'yicha malumotlarni olish
+        $bemors = $bemorModel::getByCategory($startAge, $endAge);
+
+        // JSON formatida javob qaytarish
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        return $bemors;
+    }
     public function actionViloyat()
     {
-       
         return $this->render('viloyat');
     }
     /**
@@ -166,8 +184,15 @@ class BemorController extends Controller
 
 
         if ($model->load(Yii::$app->request->post())) {
-            if($model->avatar!=null){ $model->uploadavatar();}
-            else{  $model->avatar=$avatar;}
+            $model->uploadavatar();
+            $model->uploadolingan_signal();
+            $model->uploadtashxis_file();
+            $model->uploadsignal_1();
+            $model->uploadsignal_2();
+            $model->uploadsignal_3();
+            $model->uploadsignal_4();
+            // if($model->avatar!=null){ $model->uploadavatar();}
+            // else{  $model->avatar=$avatar;}
 
             if(!$model->save()){
                 echo '<pre>';

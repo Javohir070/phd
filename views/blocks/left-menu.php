@@ -1,5 +1,6 @@
 <?
 use yii\helpers\Url;
+use yii\web\User;
 $user = Yii::$app->user->identity;
 ?>
 <!-- BEGIN: Main Menu-->
@@ -61,6 +62,26 @@ $user = Yii::$app->user->identity;
               </a>
                 
             </li>
+
+            <?php if (Yii::$app->user->identity->isAdmin()) { ?>
+                    <li class=" nav-item">
+                        <a href="<?=Url::to('/mahsulotturi/index')?>">
+                          <i class="la la-files-o"></i>
+                          <span class="menu-title" data-i18n="Hospital">Ilmiy tadqiqot loyihalari javohir </span>
+                        </a>
+                      </li>
+            <?php } else {
+                if (Yii::$app->user->identity->role == 'admin') {
+                    ?>
+                     <li class=" nav-item">
+                        <a href="<?=Url::to('/mahsulotturi/index')?>">
+                          <i class="la la-files-o"></i>
+                          <span class="menu-title" data-i18n="Hospital">Ilmiy tadqiqot loyihalari javohir </span>
+                        </a>
+                      </li>
+                <? } ?>
+                <?php } ?>
+
             <li class=" nav-item">
               <a href="#">
                 <i class="la la-cog"></i>

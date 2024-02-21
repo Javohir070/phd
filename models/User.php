@@ -17,6 +17,7 @@ use yii\web\UploadedFile;
  * @property string $password_hash
  * @property string $password_reset_token
  * @property string $email
+ * @property string $role
  * @property string $auth_key
  * @property integer $gender_id
  * @property integer $status
@@ -31,6 +32,7 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_DELETED = 0;
     const ROLE_ADMIN = 'admin';
     const ROLE_USER = 'user';
+    const ROLE_MODERATOR = "moderator";
 	const SCENARIO_UPDATE='update';
     
     public $password_r;
@@ -60,9 +62,9 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['last_name', 'first_name', 'telefon', 'date_of_birth', 'viloyat_id', 'kasb_id'], 'required'],
+            [['last_name','username', 'first_name',  'date_of_birth', 'viloyat_id'], 'required'],
             [['created_at', 'updated_at', 'last_login_at', 'viloyat_id', 'status','tuman_id', 'mutaxassislik_id','komissiya_id','kasb_id','gender_id'], 'integer'],
-            [['last_name', 'first_name', 'middle_name', 'email','role','activation_token','avatar'], 'string', 'max' => 255],
+            [['last_name', 'first_name','username', 'middle_name', 'email','role','activation_token','avatar'], 'string', 'max' => 255],
             [['activate', 'telefon', 'date_of_birth'], 'string', 'max' => 20],
             // [['email'], 'unique'],
             ['status', 'default', 'value' => self::STATUS_IN_ACTIVE],
@@ -115,6 +117,19 @@ class User extends ActiveRecord implements IdentityInterface
         // ...custom code here...
         return parent::beforeSave($insert);
     }
+    // public function afterFind()
+    // {
+    //     if (is_integer($this->created_at)) {
+    //         $this->created_at = date('d-m-Y',$this->created_at);
+    //     }
+    //     // if (is_integer($this->birth_day)) {
+    //     //     $this->birth_day = date('d-m-Y',$this->birth_day);
+    //     // }
+    //     if (is_integer($this->updated_at)) {
+    //         $this->updated_at = date('d-m-Y',$this->updated_at);
+    //     }
+    //     return parent::afterFind();
+    // }
     /**
      * @inheritdoc
      */
@@ -124,7 +139,7 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
@@ -137,20 +152,9 @@ class User extends ActiveRecord implements IdentityInterface
      * @param string $username
      * @return static|null
      */
-    public static function findByUsername($email)
+    public static function findByUsername($username)
     {
-        return static::findOne(['email' => $email, 'status' => self::STATUS_ACTIVE]);
-    }
-
-    /**
-     * Finds user by username
-     *
-     * @param string $username
-     * @return static|null
-     */
-    public static function findByPhone($phone)
-    {
-        return static::findOne(['telefon' => $phone, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
     }
 
     /**
@@ -172,10 +176,23 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
+     * Finds user by verification email token
+     *
+     * @param string $token verify email token
+     * @return static|null
+     */
+    public static function findByVerificationToken($token) {
+        return static::findOne([
+            'verification_token' => $token,
+            'status' => self::STATUS_INACTIVE
+        ]);
+    }
+
+    /**
      * Finds out if password reset token is valid
      *
      * @param string $token password reset token
-     * @return boolean
+     * @return bool
      */
     public static function isPasswordResetTokenValid($token)
     {
@@ -189,7 +206,7 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getId()
     {
@@ -197,7 +214,7 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getAuthKey()
     {
@@ -205,7 +222,7 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function validateAuthKey($authKey)
     {
@@ -216,7 +233,7 @@ class User extends ActiveRecord implements IdentityInterface
      * Validates password
      *
      * @param string $password password to validate
-     * @return boolean if password provided is valid for current user
+     * @return bool if password provided is valid for current user
      */
     public function validatePassword($password)
     {
@@ -250,39 +267,34 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
+     * Generates new token for email verification
+     */
+    public function generateEmailVerificationToken()
+    {
+        $this->verification_token = Yii::$app->security->generateRandomString() . '_' . time();
+    }
+
+    /**
      * Removes password reset token
      */
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
     }
-	public function getPassword()
-    {
-        return Yii::$app->getSecurity()->decryptByPassword($this->password_hash, 'THE_SECRET_YOU_ALREADY_HAVE_CHOOSEN');
-    }
     public function makeFIO()
     {
         return $this->last_name." ".mb_substr($this->first_name, 0,1,'UTF-8').". ".mb_substr($this->middle_name, 0,1,'UTF-8').".";
     }
-
-    public function getKasbi()
+    public function isAdmin()
     {
-        return $this->hasOne(Kasblar::className(),['id'=>'kasb_id']);
+        return $this->role == self::ROLE_ADMIN ? true : false;
     }
-
-    public function getRegion()
+    public function isModerator()
     {
-        return $this->hasOne(Viloyat::className(),['viloyat_id'=>'viloyat_id']);
+        return $this->role == self::ROLE_MODERATOR ? true : false;
     }
-
-    public function getDistrict()
-    {
-        return $this->hasOne(Tuman::className(),['tuman_id'=>'tuman_id']);
-    }
-
-    public function getGender()
-    {
-        return $this->hasOne(Gender::className(),['id'=>'gender_id']);
+    public function makeUAM(){
+        return $this->role;
     }
     public function uploadrasm()
     {

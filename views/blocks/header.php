@@ -89,6 +89,7 @@ use yii\helpers\Url;
               <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700">
                 <?if (!Yii::$app->user->isGuest){?>
                 <?=Yii::$app->user->identity->makeFIO()?>
+                (<?=Yii::$app->user->identity->makeUAM()?>)
                   <?}?>
                 </span><span class="avatar avatar-online"><img src="/web/backend/images/profile-image.png" alt="avatar"><i></i></span></a>
                 <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#"><i class="ft-user"></i> Profil</a><a class="dropdown-item" href="#"><i class="ft-clipboard"></i> Todo</a><a class="dropdown-item" href="#"><i class="ft-check-square"></i> Vazifalar</a>

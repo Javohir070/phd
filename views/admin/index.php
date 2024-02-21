@@ -342,7 +342,7 @@
                                             Payme
                                         </td>
                                         <td class="text-truncate">
-                                            <?=$model->user->makeFIO()?>
+                                            <?=$model->user->identity->makeFIO()?>
                                             (<?=$model->user->region->viloyat_nomi?>)
                                         </td>
                                         <td class="text-truncate p-1">

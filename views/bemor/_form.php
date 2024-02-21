@@ -45,7 +45,6 @@
                            <?= $form->field($model, 'last_name')->textInput(['maxlength' => true]) ?>
                            <?= $form->field($model, 'first_name')->textInput(['maxlength' => true]) ?>
                            <?= $form->field($model, 'middle_name')->textInput(['maxlength' => true]) ?> 
-                           <?= $form->field($model, 'manzili')->textInput() ?>
                            <!-- <?= $form->field($model, 'birth_day')->textInput() ?> -->
                            <?//= $form->field($model, 'birth_day')->widget(DateTimePicker::className())?>
                            <!--                                    --><?//= $form->field($model, 'birth_day')->widget(DatePicker::className(),

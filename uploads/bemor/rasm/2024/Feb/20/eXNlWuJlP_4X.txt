@@ -1,0 +1,53 @@
+Ф.И.О.  Yasinov A.A
+   пол: 			м
+   год рождения: 		1974
+   дата поступления: 		14.03.2005
+   номер истории болезни: 
+   момент исследования: 
+Дата исследования: 		14.03.2005
+Время исследования: 		21:26:35
+Диагноз:
+   норма
+Комментарий: 
+
+
+
+Configuration of modul e24:
+  COM6: 19200 bod
+Enabled channels: 1 2 3 4
+  Channel 1:
+    input: subchannel A
+    calibration: self
+    pregain:     1 (2.50 V)
+    frec:  5.00 Hz (code=3843)
+  Channel 2:
+    input: subchannel A
+    calibration: self
+    pregain:     1 (2.50 V)
+    frec:  5.00 Hz (code=3843)
+  Channel 3:
+    input: subchannel A
+    calibration: self
+    pregain:     1 (2.50 V)
+    frec:  5.00 Hz (code=3843)
+  Channel 4:
+    input: subchannel A
+    calibration: self
+    pregain:     1 (2.50 V)
+    frec:  5.00 Hz (code=3843)
+Time of recording: 00:04:59:834
+  channel 1: 1498 samples
+  channel 2: 1498 samples
+  channel 3: 1498 samples
+  channel 4: 1498 samples
+
+Information file:
+"C:\e24\YasinovA.A.0000.info.txt"
+Data from channel 1:
+"C:\e24\YasinovA.A.0000.chn1.txt"
+Data from channel 2:
+"C:\e24\YasinovA.A.0000.chn2.txt"
+Data from channel 3:
+"C:\e24\YasinovA.A.0000.chn3.txt"
+Data from channel 4:
+"C:\e24\YasinovA.A.0000.chn4.txt"

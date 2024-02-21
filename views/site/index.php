@@ -299,7 +299,7 @@ $(".left").click(function(){
                              <?=mb_substr($fikr->matn, 0,180, 'UTF-8');echo(mb_strlen($fikr->matn, 'UTF-8')>180)?'...':''?>
                           </p>
                            
-                          <footer><?=$fikr->user->makeFIO()?></footer>
+                          
                         </blockquote>
                       </div>
                     </div>

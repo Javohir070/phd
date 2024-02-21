@@ -28,7 +28,7 @@ class SignupForm extends Model
             [['last_name','first_name','middle_name'] , 'string', 'max' => 255],
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => 'app\models\User', 'message' => 'This email address has already been taken.'],
+            ['email', 'unique', 'targetClass' => 'app\models\User', 'message' => 'Bu email manzil allaqachon ro`yxatdan o`tgan.'],
             ['password_hash', 'string', 'min' => 6],
             ['telefon', 'integer', 'min'=>12]
         ];

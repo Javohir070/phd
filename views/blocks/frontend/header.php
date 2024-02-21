@@ -45,14 +45,17 @@ use yii\helpers\Url;
                 </a>
             </div>
             <?php if (Yii::$app->user->isGuest) { ?>
-                <a href="#" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8"
-                   data-toggle="modal" data-target="#ms-account-modal">
+                <a href="<?= Url::to('/site/login') ?>" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8">
                     <i class="zmdi zmdi-account"></i>
                 </a>
+                <!-- <a href="#" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8"
+                   data-toggle="modal" data-target="#ms-account-modal">
+                    <i class="zmdi zmdi-account"></i>
+                </a> -->
             <?php } else {
-                if (Yii::$app->user->identity->role == 'admin') {
+                if (Yii::$app->user->identity->makeUAM() == 'admin' || Yii::$app->user->identity->makeUAM() == 'moderator' ) {
                     ?>
-                    <a href="<?= Url::to('/admin/index') ?>"
+                    <a href="<?= Url::to('/bemor/index') ?>"
                        class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8 aass"
                        style="width: 120px; ">
                         Admin panel

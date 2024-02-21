@@ -54,6 +54,8 @@ use app\models\Mutaxasislik;
 
                                     <?= $form->field($model, 'middle_name')->textInput(['maxlength' => true]) ?>
 
+                                    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
+
                                     <?= $form->field($model, 'viloyat_id')->dropDownList(
                                         ArrayHelper::map(Viloyat::find()->all(), 'viloyat_id', 'viloyat_nomi'),
                                         [
@@ -80,9 +82,7 @@ use app\models\Mutaxasislik;
 
                                     <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
 
-                                    <?= $form->field($model, 'created_at')->textInput() ?>
-
-                                    <?= $form->field($model, 'role')->dropDownList(['user' => 'User', 'admin' => 'Admin']) ?>
+                                    <?= $form->field($model, 'role')->dropDownList(['user' => 'User', 'admin' => 'Admin', 'moderator'=> 'Moderator']) ?>
 
                                 </div>
 
