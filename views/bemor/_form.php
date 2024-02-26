@@ -5,6 +5,7 @@
    use yii\helpers\ArrayHelper;
    use app\models\Viloyat;
    use app\models\Tuman;
+   use app\models\Mahsulotturi;
    use app\models\Komissiya;
    use app\models\Mutaxasislik;
    use kartik\date\DatePicker;
@@ -45,19 +46,6 @@
                            <?= $form->field($model, 'last_name')->textInput(['maxlength' => true]) ?>
                            <?= $form->field($model, 'first_name')->textInput(['maxlength' => true]) ?>
                            <?= $form->field($model, 'middle_name')->textInput(['maxlength' => true]) ?> 
-                           <!-- <?= $form->field($model, 'birth_day')->textInput() ?> -->
-                           <?//= $form->field($model, 'birth_day')->widget(DateTimePicker::className())?>
-                           <!--                                    --><?//= $form->field($model, 'birth_day')->widget(DatePicker::className(),
-                              //                                        [
-                              ////                                        'name' => 'check_issue_date',
-                              ////                                        'value' => date('d-M-Y', strtotime('+2 days')),
-                              ////                                        'options' => ['placeholder' => 'Sanani tanlang ...'],
-                              //                                        'pluginOptions' => [
-                              //                                        'format' => 'dd-M-yyyy',
-                              //                                        'todayHighlight' => true
-                              //                                        ]
-                              //                                        ]);
-                              //                                    ?>
                            <?= $form->field($model, 'telefon')->textInput(['maxlength' => true]) ?>
                            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
                            <?= $form->field($model, 'jinsi')->dropDownList(['erkak' => 'Erkak', 'ayol' => 'Ayol']) ?> 
@@ -89,7 +77,12 @@
                               </div>
                            </fieldset>
                            <?= $form->field($model, 'manzili')->textInput() ?>
-                           <?= $form->field($model, 'tashxis')->textInput(['maxlength' => true]) ?>
+                           <?= $form->field($model, 'tashxis')->dropDownList(
+                                                        ArrayHelper::map(Mahsulotturi::find()->all(),'nomi','nomi'),
+                                                        [
+                                                            'prompt'=>'Tashxis kategoriyasini tanlang'
+                                                        ]
+                                                    ) ?>
                            <?= $form->field($model, 'tashxis_file')->fileInput(['maxlength' => true]) ?>
                            <?= $form->field($model, 'olingan_signal')->fileInput(['maxlength' => true]) ?>
                            <?= $form->field($model, 'signal_1')->fileInput(['maxlength' => true]) ?>
@@ -113,8 +106,7 @@
 </section>
 <?php
 $js = <<< JS
-   
-   
+ 
    $('body').delegate('#inputVil','change', function(e) {
        let vil_id = $(this).val();
           $.ajax({

@@ -187,7 +187,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                         </th>
                                         <th><a href="/bemor/index?sort=birth_day" data-sort="birth_day">Tug'ilgan
                                                 sana</a></th>
-                                                <th><a href="/bemor/index?sort=birth_day" data-sort="birth_day">Yosh</a></th>
+                                                <th><a href="/bemor/index?sort=birth_day" data-sort="birth_day">Yosh</a>
+                                                <select id="ageFilter">
+                                                <option value="all">Hammasi</option>
+                                                <option value="10-15">10-15</option>
+                                                <option value="20-30">20-30</option>
+                                            </select>
+                                            </th>
                                         <th><a href="/bemor/index?sort=telefon" data-sort="telefon">Telefon</a></th>
                                         <th><a href="/bemor/index?sort=email" data-sort="email">Email</a></th>
                                         <th col-index=10>Jinsi
@@ -220,7 +226,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <th class="action-column">&nbsp;</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="myTable">
                                     <?php foreach($abs as $r){?>
                                     <tr data-key="13">
                                         <td><?=$r->id?></td>
@@ -268,7 +274,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?=$r->manzili?></td>
                                         <td><a href="<?=Url::to(['/bemor/chart','id'=>$r->id])?>" aria-label="View" data-pjax="0"><span class="solar--chart-bold"></span></a>
                                                     
-                                        <a href="/bemor/view/<?=$r->id?>" title="View" aria-label="View" data-pjax="0"><span
+                                        <a href="<?=Url::to(['/bemor/view/'.$r->id,'id'=>$r->id])?>" title="View" aria-label="View" data-pjax="0"><span
                                                     class="glyphicon glyphicon-eye-open"><i class="ft-eye text-success"></i></span></a>
                                                      <a href="/bemor/update/<?=$r->id?>" title="Update" aria-label="Update"
                                                 data-pjax="0"><span class="glyphicon glyphicon-pencil"><i class="ft-edit text-success"></i></span></a> <a

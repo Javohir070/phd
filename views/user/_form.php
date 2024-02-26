@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\models\Viloyat;
 use app\models\Tuman;
+use app\models\Kasblar;
 use app\models\Komissiya;
 use app\models\Mutaxasislik;
 
@@ -82,8 +83,12 @@ use app\models\Mutaxasislik;
 
                                     <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
 
-                                    <?= $form->field($model, 'role')->dropDownList(['user' => 'User', 'admin' => 'Admin', 'moderator'=> 'Moderator']) ?>
-
+                                    <?= $form->field($model, 'role')->dropDownList(
+                                                        ArrayHelper::map(Kasblar::find()->all(),'nomi','nomi'),
+                                                        [
+                                                            'prompt'=>'Rol tanlang'
+                                                        ]
+                                                    ) ?>
                                 </div>
 
 

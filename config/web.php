@@ -97,6 +97,7 @@ $config = [
                   //'quiz/<controller:\w+>/<action:\w+>/<id:\d+>' => 'quiz/<controller>/<action>',
                   '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                   'defaultRoute' => '/site/index',
+                  'admin' => '/site/login',
             ],
         ],
         

@@ -296,6 +296,20 @@ class User extends ActiveRecord implements IdentityInterface
     public function makeUAM(){
         return $this->role;
     }
+    public function getKasbi()
+    {
+        return $this->hasOne(Kasblar::className(),['id'=>'kasb_id']);
+    }
+
+    public function getRegion()
+    {
+        return $this->hasOne(Viloyat::className(),['viloyat_id'=>'viloyat_id']);
+    }
+
+    public function getDistrict()
+    {
+        return $this->hasOne(Tuman::className(),['tuman_id'=>'tuman_id']);
+    }
     public function uploadrasm()
     {
             $this->avatar = UploadedFile::getInstance($this, 'avatar');

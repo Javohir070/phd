@@ -45,11 +45,11 @@ $erk = \app\models\Bemor::find()->all();
             <!-- Bar Basic Chart Start -->
             <div class="card">
                 <div class="card-body" style="position: relative;">
-                <div class="card-title">Bar Basic Chart</div>
-                <div id="bar-basic-chart" style="">
+                <div class="card-title">Yosh bo'yicha statistik </div>
+                <div id="bar-basic-chart" >
                     <div id="pie-simple-chart" class="apexcharts-canvas pie-simple-chart light" ></div>
                 </div>
-                <div class="resize-triggers"><div class="expand-trigger"><div style=""></div></div><div class="contract-trigger"></div></div></div>
+                <!-- <div class="resize-triggers"><div class="expand-trigger"><div style=""></div></div><div class="contract-trigger"></div></div></div> -->
             </div>
             <!-- bar basic chart end -->
         </div>
@@ -67,7 +67,9 @@ $erk = \app\models\Bemor::find()->all();
             $info = "#1E9FF2",
             $warning = "#FF9149",
             $danger = "#FF4961",
-            $themeColor = [$primary, $success, $info, $warning, $danger, $secondary],
+            $sariq ="#5EFF33",
+            $qora = "#0A0D09",
+            $themeColor = [$primary, $success, $info, $warning, $danger, $secondary, $sariq, $qora],
             lineBasicChart = {
                 chart: {
                     height: 350,
@@ -759,11 +761,11 @@ $erk = \app\models\Bemor::find()->all();
             },
             pieSimpleChart = {
                 chart: {
-                    height: 350,
+                    height: 600,
                     type: "pie"
                 },
-                labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
-                series: [44, 55, 13, 43, 22],
+                labels: ["yosh 10-15", "yosh 15-20", "yosh 20-25", "yosh 25-35", "yosh 35-50", "yosh 50-60", "yosh 60-70", "yosh 70-...."],
+                series: [44, 55, 13, 43, 22, 41, 25, 23],
                 responsive: [{
                     breakpoint: 1200,
                     options: {
