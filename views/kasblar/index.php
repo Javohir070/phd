@@ -7,7 +7,7 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Kasblar';
+$this->title = 'Rollar';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="kasblar-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Kasb qo\'shish', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Role qo\'shish', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 <div class="users-list-table">
@@ -93,3 +93,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 </div>
+
+
+<?
+$this->registerJs('
+    
+    $(".pagination li").addClass( "btn btn-icon btn-outline-primary" );
+
+    ');
+$this->registerCss('
+    .edit-item-btn{
+        margin-left:4px;
+    }
+    ');
+?>

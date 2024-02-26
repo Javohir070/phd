@@ -206,8 +206,6 @@ $this->params['breadcrumbs'][] = $this->title;
     // Bazadan kelgan fayl nomi
 // var fileName = "/uploads/bemor/signals/2023/Dec/14/text.txt";
 var fileName = "/<?=$mod?>"
-let av = "/<?=$mod?>";
-console.log(av, "javohir");
 
 // Faylni o'qish uchun XMLHttpRequest obyekti yaratish
 var xhr = new XMLHttpRequest();

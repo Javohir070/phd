@@ -6,36 +6,6 @@ use yii\helpers\Url;
 use app\models\Bemor;
 use yii\widgets\DetailView;
 use app\models\Tavsiya;
-
-$kamchiliklar = array("Gastrit", "Ulserativ kolit", "Crohn kasalligi", "Gepatit", "Diareya", "Pilorik stenoz", "Atrofik gastrit", "Oshqozon yarasi", "Helicobacter pylori", "Epstein-Barr virusi", "Dispepsiya", "Mezenterik ishemiya", "Qabziyat", "Enterit", "Surunkali malabsorbtsiya", "Qisqa ichak sindromi", "Apandisit", "fdsgdsfhg");
-
-// Associative array
-$kamchiliklarAssociative = array(
-    0 => "Gastrit",
-    1 => "Ulserativ kolit",
-    2 => "Crohn kasalligi",
-    3 => "Gepatit",
-    4 => "Diareya",
-    5 => "Pilorik stenoz",
-    6 => "Atrofik gastrit",
-    7 => "Oshqozon yarasi",
-    8 => "Helicobacter pylori",
-    9 => "Epstein-Barr virusi",
-    10 => "Dispepsiya",
-    11 => "Mezenterik ishemiya",
-    12 => "Qabziyat",
-    13 => "Enterit",
-    14 => "Surunkali malabsorbtsiya",
-    15 => "Qisqa ichak sindromi",
-    16 => "Apandisit",
-    27 => "fdsgdsfhg"
-);
-
-// Using square bracket syntax (short array syntax, available in PHP 5.4 and later)
-$kamchiliklarShortSyntax = ["Gastrit", "Ulserativ kolit", "Crohn kasalligi", "Gepatit", "Diareya", "Pilorik stenoz", "Atrofik gastrit", "Oshqozon yarasi", "Helicobacter pylori", "Epstein-Barr virusi", "Dispepsiya", "Mezenterik ishemiya", "Qabziyat", "Enterit", "Surunkali malabsorbtsiya", "Qisqa ichak sindromi", "Apandisit", "fdsgdsfhg"];
-
-// Output the arrays
-
 $erk = \app\models\Bemor::find()->all();
     $tashxis_arr = [];
     foreach ($erk as $x) {

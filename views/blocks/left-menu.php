@@ -67,7 +67,7 @@ $user = Yii::$app->user->identity;
                     <li class=" nav-item">
                         <a href="<?=Url::to('/mahsulotturi/index')?>">
                           <i class="la la-files-o"></i>
-                          <span class="menu-title" data-i18n="Hospital">Ilmiy tadqiqot loyihalari javohir </span>
+                          <span class="menu-title" data-i18n="Hospital">Kasalliklar turlari </span>
                         </a>
                       </li>
             <?php } else {
@@ -76,7 +76,7 @@ $user = Yii::$app->user->identity;
                      <li class=" nav-item">
                         <a href="<?=Url::to('/mahsulotturi/index')?>">
                           <i class="la la-files-o"></i>
-                          <span class="menu-title" data-i18n="Hospital">Ilmiy tadqiqot loyihalari javohir </span>
+                          <span class="menu-title" data-i18n="Hospital">Kasalliklar turlari </span>
                         </a>
                       </li>
                 <? } ?>
@@ -92,7 +92,7 @@ $user = Yii::$app->user->identity;
                     </li>
                     <li><a class="menu-item" href="<?=Url::to('/tuman/index')?>"><i></i><span data-i18n="Timelines Left">Tumanlar</span></a>
                     </li>
-                    <li><a class="menu-item" href="<?=Url::to('/kasblar/index')?>"><i></i><span data-i18n="Timelines Right">Kasblar</span></a>
+                    <li><a class="menu-item" href="<?=Url::to('/kasblar/index')?>"><i></i><span data-i18n="Timelines Right">Rollar</span></a>
                     </li>
 
                 </ul>

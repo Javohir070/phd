@@ -17,16 +17,16 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="mahsulotturi-view">
     <div class="header">
      <p>
-        <?= Html::a(Yii::t('app', 'Ro\'yhatga qaytish'), ['index', 'id' => $model->Id], ['class' => 'btn btn-info']) ?>
-        <?= Html::a('Tahrirlash', ['update', 'id' => $model->Id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('O\'chirish', ['delete', 'id' => $model->Id], ['class' => 'btn btn-danger', 'data' => [
+        <?= Html::a(Yii::t('app', 'Ro\'yhatga qaytish'), ['index', 'id' => $model->id], ['class' => 'btn btn-info']) ?>
+        <?= Html::a('Tahrirlash', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('O\'chirish', ['delete', 'id' => $model->id], ['class' => 'btn btn-danger', 'data' => [
          'confirm' => 'Are you sure you want to delete this item?', 'method' => 'post',
              ],
          ]) ?>
     </p>
 </div>
 
-    <h1>Kategoriya nomi: <?= Html::encode($this->title) ?></h1>
+    <h1>Kasallik nomi: <?= Html::encode($this->title) ?></h1>
 
     
     
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?= DetailView::widget([
                             'model' => $model,
                             'attributes' => [
-                                'Id',
+                                'id',
                                 'nomi',
                                 'status',
                             ],

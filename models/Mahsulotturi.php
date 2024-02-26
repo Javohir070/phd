@@ -39,8 +39,8 @@ class Mahsulotturi extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Id' => 'ID',
-            'nomi' => 'Kategoriya nomi',
+            'id' => 'ID',
+            'nomi' => 'Kasallik nomi',
             'status' => 'Status',
         ];
     }

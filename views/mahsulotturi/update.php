@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Mahsulotturi */
 
-$this->title = 'Kategoriya turini tahrirlash: ' . $model->Id;
+$this->title = 'Kasalliklar turni tahrirlash: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Mahsulotturis', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->Id, 'url' => ['view', 'id' => $model->Id]];
+$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="mahsulotturi-update">

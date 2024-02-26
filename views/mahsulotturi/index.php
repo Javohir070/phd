@@ -7,14 +7,14 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Pedagogik metodika kategoriyasi yaratish';
+$this->title = 'Kasalliklar turlari';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="header">
         <h1  style="float: left;"><?= Html::encode($this->title) ?></h1>
         <p style="margin-left: 70%;">
-            <?= Html::a('Kategoriya qo\'shish', ['create'], ['class' => 'btn btn-info btn-min-width mr-1 mb-1 btn-block']) ?>
+            <?= Html::a('Kasallik turni qo\'shish', ['create'], ['class' => 'btn btn-info btn-min-width mr-1 mb-1 btn-block']) ?>
         </p>
     </div>
     <br>
@@ -71,12 +71,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                               ],
                                               'urlCreator' => function ($action, $model, $key, $index) {
                                                 if ($action === 'view') {
-                                                    $url =Url::to('/mahsulotturi/view/'.$model->Id);
+                                                    $url =Url::to('/mahsulotturi/view/'.$model->id);
                                                     return $url;
                                                 }
 
                                                 if ($action === 'update') {
-                                                    $url =Url::to('/mahsulotturi/update/'.$model->Id);
+                                                    $url =Url::to('/mahsulotturi/update/'.$model->id);
                                                     return $url;
                                                 }
                                                 if ($action === 'delete') {
