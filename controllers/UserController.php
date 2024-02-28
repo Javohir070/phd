@@ -16,6 +16,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\web\Response;
+use app\models\RegistrationForm;
 
 /**
  * UserController implements the CRUD actions for User model.

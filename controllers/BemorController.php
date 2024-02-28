@@ -98,18 +98,8 @@ class BemorController extends Controller
      */
     public function actionView($id)
     {  
-        
-        $id_1 = 1;
-        $id_2 = 2;
-        $id_3 = 4;
-        $segnal_id1 = Bemor::findOne($id_1);
-        $segnal_id2 = Bemor::findOne($id_2);
-        $segnal_id3 = Bemor::findOne($id_3);
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'segnal_id1'=>$segnal_id1,
-            'segnal_id2'=>$segnal_id2,
-            'segnal_id3'=>$segnal_id3,
         ]);
     }
 
@@ -166,7 +156,7 @@ class BemorController extends Controller
 
            }
 
-           return $this->redirect(['view', 'id' => $model->id]);
+           return $this->redirect(['tashxis', 'id' => $model->id]);
        }
 
         return $this->render('create', [

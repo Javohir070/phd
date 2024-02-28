@@ -48,10 +48,10 @@ use yii\helpers\Url;
                 <a href="<?= Url::to('/site/login') ?>" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8">
                     <i class="zmdi zmdi-account"></i>
                 </a>
-                <!-- <a href="#" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8"
+                <a href="#" class="btn-circle btn-circle-primary no-focus animated zoomInDown animation-delay-8"
                    data-toggle="modal" data-target="#ms-account-modal">
                     <i class="zmdi zmdi-account"></i>
-                </a> -->
+                </a>
             <?php } else {
                 if (Yii::$app->user->identity->makeUAM() == 'admin' || Yii::$app->user->identity->makeUAM() == 'moderator' ) {
                     ?>

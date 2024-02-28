@@ -28,31 +28,33 @@ $erk = \app\models\Bemor::find()->all();
 ?>
 
 
-
-        <div class="col-6 ">
-            <!-- Bar Basic Chart Start -->
-            <div class="card">
-                <div class="card-body" style="position: relative;">
-                <div class="card-title">Kasalliklar turi</div>
-                <div id="bar-basic-chart" style="">
-                    <div id="apexchartspz6pgtkh" class="apexcharts-canvas apexchartspz6pgtkh light" ></div>
+   
+            <div class="col-12 col-sm-6 col-md-6">
+                <!-- Bar Basic Chart Start -->
+                <div class="card">
+                    <div class="card-body" style="position: relative;">
+                        <div class="card-title">Kasalliklar turi</div>
+                        <div id="bar-basic-chart" style="">
+                            <div id="apexchartspz6pgtkh" class="apexcharts-canvas apexchartspz6pgtkh light" ></div>
+                        </div>
+                        <!-- <div class="resize-triggers"><div class="expand-trigger"><div style=""></div></div><div class="contract-trigger"></div></div></div> -->
+                    </div>
+                    <!-- bar basic chart end -->
                 </div>
-                <div class="resize-triggers"><div class="expand-trigger"><div style=""></div></div><div class="contract-trigger"></div></div></div>
             </div>
-            <!-- bar basic chart end -->
-        </div>
-        <div class="col-6 " style="">
-            <!-- Bar Basic Chart Start -->
-            <div class="card">
-                <div class="card-body" style="position: relative;">
-                <div class="card-title">Yosh bo'yicha statistik </div>
-                <div id="bar-basic-chart" >
-                    <div id="pie-simple-chart" class="apexcharts-canvas pie-simple-chart light" ></div>
+            <div class="col-12 col-sm-6 col-md-6" style="">
+                <!-- Bar Basic Chart Start -->
+                <div class="card">
+                    <div class="card-body" style="position: relative;">
+                        <div class="card-title">Yosh bo'yicha statistik </div>
+                        <div id="bar-basic-chart" >
+                            <div id="pie-simple-chart" class="apexcharts-canvas pie-simple-chart light" ></div>
+                        </div>
+                        <!-- <div class="resize-triggers"><div class="expand-trigger"><div style=""></div></div><div class="contract-trigger"></div></div></div> -->
+                    </div>
+                    <!-- bar basic chart end -->
                 </div>
-                <!-- <div class="resize-triggers"><div class="expand-trigger"><div style=""></div></div><div class="contract-trigger"></div></div></div> -->
-            </div>
-            <!-- bar basic chart end -->
-        </div>
+            </div> 
 
 <script>
 
@@ -62,14 +64,14 @@ $erk = \app\models\Bemor::find()->all();
                 kasalik_turlari.push(jsTashxis[key]);
             }
             var $primary = "#666ee8",
-            $secondary = "#6B6F82",
             $success = "#1C9066",
             $info = "#1E9FF2",
             $warning = "#FF9149",
             $danger = "#FF4961",
+            $secondary = "#6B6F82",
             $sariq ="#5EFF33",
-            $qora = "#0A0D09",
-            $themeColor = [$primary, $success, $info, $warning, $danger, $secondary, $sariq, $qora],
+            $black = "#0A0D09",
+            $ranglar = [$primary, $success, $info, $warning, $danger, $secondary, $sariq, $black],
             lineBasicChart = {
                 chart: {
                     height: 350,
@@ -87,7 +89,7 @@ $erk = \app\models\Bemor::find()->all();
                 },
                 stroke: {
                     curve: "straight",
-                    colors: $themeColor
+                    colors: $ranglar
                 },
                 title: {
                     text: "Product Trends by Month",
@@ -113,7 +115,7 @@ $erk = \app\models\Bemor::find()->all();
                 },
                 stroke: {
                     curve: "smooth",
-                    colors: $themeColor
+                    colors: $ranglar
                 },
                 series: [{
                     name: "series1",
@@ -181,7 +183,7 @@ $erk = \app\models\Bemor::find()->all();
                     }
                 },
                 fill: {
-                    colors: $themeColor
+                    colors: $ranglar
                 }
             },
             barBasicChart = {
@@ -205,7 +207,7 @@ $erk = \app\models\Bemor::find()->all();
                     categories:kasalik_turlari
                 },
                 fill: {
-                    colors: $themeColor
+                    colors: $ranglar
                 }
             },
 
@@ -226,7 +228,7 @@ $erk = \app\models\Bemor::find()->all();
                         columnWidth: "50%"
                     }
                 },
-                colors: $themeColor,
+                colors: $ranglar,
                 series: [{
                     name: "Facebook",
                     type: "column",
@@ -530,7 +532,7 @@ $erk = \app\models\Bemor::find()->all();
                 }],
                 fill: {
                     type: "gradient",
-                    colors: $themeColor
+                    colors: $ranglar
                 },
                 title: {
                     text: "3D Bubble Chart"
@@ -676,7 +678,7 @@ $erk = \app\models\Bemor::find()->all();
                     tickAmount: 7
                 },
                 fill: {
-                    colors: $themeColor
+                    colors: $ranglar
                 }
             };
 
@@ -761,7 +763,7 @@ $erk = \app\models\Bemor::find()->all();
             },
             pieSimpleChart = {
                 chart: {
-                    height: 600,
+                    height: 610,
                     type: "pie"
                 },
                 labels: ["yosh 10-15", "yosh 15-20", "yosh 20-25", "yosh 25-35", "yosh 35-50", "yosh 50-60", "yosh 60-70", "yosh 70-...."],
@@ -770,7 +772,8 @@ $erk = \app\models\Bemor::find()->all();
                     breakpoint: 1200,
                     options: {
                         chart: {
-                        width: 300
+                        width: 300,
+                        height: 500
                         },
                         legend: {
                         position: "bottom"
@@ -808,7 +811,7 @@ $erk = \app\models\Bemor::find()->all();
                     }
                 }],
                 fill: {
-                    colors: $themeColor
+                    colors: $ranglar
                 }
             },
             

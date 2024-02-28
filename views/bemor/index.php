@@ -274,7 +274,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <td><?=$r->manzili?></td>
                                         <td><a href="<?=Url::to(['/bemor/chart','id'=>$r->id])?>" aria-label="View" data-pjax="0"><span class="solar--chart-bold"></span></a>
                                                     
-                                        <a href="<?=Url::to(['/bemor/view/'.$r->id,'id'=>$r->id])?>" title="View" aria-label="View" data-pjax="0"><span
+                                        <a href="<?=Url::to(['/bemor/view/'.$r->id])?>" title="View" aria-label="View" data-pjax="0"><span
                                                     class="glyphicon glyphicon-eye-open"><i class="ft-eye text-success"></i></span></a>
                                                      <a href="/bemor/update/<?=$r->id?>" title="Update" aria-label="Update"
                                                 data-pjax="0"><span class="glyphicon glyphicon-pencil"><i class="ft-edit text-success"></i></span></a> <a

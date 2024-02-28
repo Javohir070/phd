@@ -112,7 +112,6 @@ function filter_rows() {
                  obj.push(a);
                 
             }
-            console.log(obj + ' salom');
             
             
         } else {
