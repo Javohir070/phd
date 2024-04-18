@@ -50,6 +50,7 @@ class BemorController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => Bemor::find(),
         ]);
+        
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
@@ -121,9 +122,9 @@ class BemorController extends Controller
 //        ]);
 //    }
     public function actionTashxis($id){
-        $id_1 = 1;
-        $id_2 = 2;
-        $id_3 = 4;
+        $id_1 =rand(1, 10);
+        $id_2 =rand(10, 20);
+        $id_3 =rand(1, 30);
         $segnal_id1 = Bemor::findOne($id_1);
         $segnal_id2 = Bemor::findOne($id_2);
         $segnal_id3 = Bemor::findOne($id_3);

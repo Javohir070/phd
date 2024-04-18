@@ -265,7 +265,6 @@ $this->params['breadcrumbs'][] = $this->title;
             xhr.send();
             });
         }
-        
         // Fayllarni o'qish uchun massiv
         var fileNames = ["/<?=$model->olingan_signal?>", "/<?=$model->signal_1?>", "/<?=$model->signal_2?>", "/<?=$model->signal_3?>","/<?=$model->signal_4?>"];
         
