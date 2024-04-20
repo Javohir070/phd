@@ -308,8 +308,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     const element2 =signalArr[i];
                     let adf = signalArr[i]/1000000;
                     const element =yQiymati.push(adf);
-                    }   
+                }   
             };
+
             //birinchi signal qiymatilar
             var fileuzgarivch1 = variable1;
             let signalArr1 = fileuzgarivch1.split(" ")
@@ -374,6 +375,35 @@ $this->params['breadcrumbs'][] = $this->title;
                     const element =yQiymati4.push(adf);
                     };   
             };
+   // bu signalin tekshirish uchun ikki signalin 
+            function cityBlockDistance(vec1, vec2) {
+            if (vec1.length !== vec2.length) {
+                throw new Error("Vektorlar bir xil uzunlikda bo'lishi kerak");
+            }
+            let sum = 0;
+            for (let i = 0; i < vec1.length; i++) {
+                sum += Math.abs(vec1[i] - vec2[i]);
+            }
+            return sum;
+        }
+
+        // Define two arrays
+        let A = xQiymati;
+
+
+        let B = yQiymati;
+
+
+        // Vektorlar orasidagi Manxetten masofasini hisoblang
+        let manhattanDistance = cityBlockDistance(A, B);
+
+        console.log("A to'plam elementlari:");
+        console.log(A.join(" "));
+        console.log("B to'plam elementlari:");
+        console.log(B.join(" "));
+        console.log("A va B to'plamning Manhetten masofasi = " + manhattanDistance);
+        console.log("A va B2 to'plamning Manhetten masofasi = " + manhattanDistanceB2);
+
 
             //chart signalar buyicha ummumiysi
             const xValues5 = xQiymati;
