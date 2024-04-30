@@ -104,13 +104,13 @@ class SiteController extends Controller
         //echo "salom";exit;
         $this->layout="login";
         // $this->layout="frontend";
-        if (!Yii::$app->user->isGuest) {    
-        	$user=Yii::$app->user->identity->role;
-        	if($role=="admin")
-            return $this->redirect(['profile/index']);
-        	if($role=="user")
-        		return $this->redirect(['profile/index']);
-        }
+        // if (!Yii::$app->user->isGuest) {    
+        // 	$user=Yii::$app->user->identity->role;
+        // 	if($role=="admin")
+        //     return $this->redirect(['profile/index']);
+        // 	if($role=="user")
+        // 		return $this->redirect(['profile/index']);
+        // }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post())) {
@@ -262,7 +262,7 @@ class SiteController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-    public function actionHujjat()
+    public function actionHujjat($id)
     {
         
         $models = Hujjatlar::find()->where(['turi'=>$id,'status'=>1])->all();

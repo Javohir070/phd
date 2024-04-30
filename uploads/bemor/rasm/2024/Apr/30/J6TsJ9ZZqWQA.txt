@@ -1,0 +1,73 @@
+Ф.И.О.: Ymarov P.Y
+   пол:                      ж
+   год рождения:             1978
+   домашний алрес:           
+   контактный телефон:                   
+Номер истории болезни:       
+   отделение:                
+      дата заболевания:        
+      дата поступления:      16.04.2005
+      дата выписки (смерти):   
+   койко-дни:                общие , п/о 
+   поступление:              
+Дата исследования:           16.04.2005
+Время исследования:          15:32:22
+   энтерограмма:             
+Диагнозы:
+норма
+   при поступлении:
+   основной:
+   осложнения основного:
+   сопутствующий:
+   патологоанатомический:
+Дополнительные исследования:
+   рентген-исследование:
+   УЗИ брюшной полости:
+Операция:
+П/о осложнения:
+МОК:                      
+Стимуляция кишечника:     
+Комментарий:
+          
+
+
+
+Configuration of modul e24:
+  COM6: 19200 bod
+Enabled channels: 1 2 3 4
+  Channel 1:
+    input: subchannel A
+    calibration: self
+    pregain:     1 (2.50 V)
+    frec:  5.00 Hz (code=3843)
+  Channel 2:
+    input: subchannel A
+    calibration: self
+    pregain:     1 (2.50 V)
+    frec:  5.00 Hz (code=3843)
+  Channel 3:
+    input: subchannel A
+    calibration: self
+    pregain:     1 (2.50 V)
+    frec:  5.00 Hz (code=3843)
+  Channel 4:
+    input: subchannel A
+    calibration: self
+    pregain:     1 (2.50 V)
+    frec:  5.00 Hz (code=3843)
+Time of recording: 00:14:59:902
+  channel 1: 4496 samples
+  channel 2: 4496 samples
+  channel 3: 4496 samples
+  channel 4: 4496 samples
+
+Information file:
+"C:\e24\YmarovP.Y.0000.info.txt"
+Data from channel 1:
+"C:\e24\YmarovP.Y.0000.chn1.txt"
+Data from channel 2:
+"C:\e24\YmarovP.Y.0000.chn2.txt"
+Data from channel 3:
+"C:\e24\YmarovP.Y.0000.chn3.txt"
+Data from channel 4:
+"C:\e24\YmarovP.Y.0000.chn4.txt"

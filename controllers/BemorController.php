@@ -63,6 +63,14 @@ class BemorController extends Controller
             'model' => $model
         ]);
     }
+    public function actionTekshirish()
+    {
+        $model = Bemor::find()->all();
+        Yii::$app->session->set('key', 'javohir');
+        return $this->render('tekshirish',[
+            'model' => $model
+        ]);
+    }
     public function actionTurlar(){
         return $this->render('turlar');
     }
@@ -91,6 +99,8 @@ class BemorController extends Controller
     {
         return $this->render('viloyat');
     }
+
+    
     /**
      * Displays a single Bemor model.
      * @param integer $id
@@ -122,15 +132,15 @@ class BemorController extends Controller
 //        ]);
 //    }
     public function actionTashxis($id){
-        $id_1 =rand(1, 10);
+        // $signallar = 1;
         $id_2 =rand(10, 20);
         $id_3 =rand(1, 30);
-        $segnal_id1 = Bemor::findOne($id_1);
+        $signallar = Bemor::find()->all();
         $segnal_id2 = Bemor::findOne($id_2);
         $segnal_id3 = Bemor::findOne($id_3);
         return $this->render('tashxis', [
             'model' => $this->findModel($id),
-            'segnal_id1'=>$segnal_id1,
+            'signallar'=>$signallar,
             'segnal_id2'=>$segnal_id2,
             'segnal_id3'=>$segnal_id3,
         ]);
